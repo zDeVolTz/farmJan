@@ -1565,7 +1565,7 @@ display: flex;
     animation: floatEffect2 15s infinite ease-in-out;
   }
 
-.main-block {
+/* .main-block {
     width: 90%;
     height: 50%;
     margin: 0;
@@ -1577,7 +1577,7 @@ display: flex;
     top: 30%;
     left: 12%;
     text-align: left;
-}
+} */
 
 
 .image-group img {
@@ -1900,6 +1900,37 @@ display: flex;
     cursor: pointer;
     z-index: 999999999999999999;
 }
+
+.main-block {
+  width: 90%;
+  height: 50%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  top: 30%;
+  left: 12%;
+  text-align: left;
+
+  -webkit-tap-highlight-color: transparent; /* Убирает подсветку */
+}
+
+.main-block:focus,
+.main-block:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.main-block a,
+.main-block button {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  box-shadow: none;
+}
+
+
 
 @media (hover: none) and (pointer: coarse) {
   *:focus,
