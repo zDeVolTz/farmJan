@@ -35,22 +35,22 @@ const percent_animation = `
 
 const e_26 = `
     <div class="pill"
-        onclick="addTemporarySlide({image: '/slides/Enterol2560/E (28).png', type: 'Enterol',})">
+        onclick="addTemporarySlide({image: 'slides/Enterol2560/E (28).png', type: 'Enterol',})">
     </div>
     <div class="bubble-text"
-        onclick="addTemporarySlide({image: '/slides/Enterol2560/E (27).png', type: 'Enterol',})">
+        onclick="addTemporarySlide({image: 'slides/Enterol2560/E (27).png', type: 'Enterol',})">
     </div>
 `
 
 const e_9 = `
     <div class="pill-e9"
-        onclick="addTemporarySlide({image: '/slides/Enterol2560/E (11).png', type: 'Enterol',})">
+        onclick="addTemporarySlide({image: 'slides/Enterol2560/E (11).png', type: 'Enterol',})">
     </div>
     <div class="bubble-text-top-e9"
-        onclick="addTemporarySlide({image: '/slides/Enterol2560/E (27).png', type: 'Enterol',})">
+        onclick="addTemporarySlide({image: 'slides/Enterol2560/E (27).png', type: 'Enterol',})">
     </div>
     <div class="bubble-text-bottom-e9"
-        onclick="addTemporarySlide({image: '/slides/Enterol2560/E (10).png', type: 'Enterol',})">
+        onclick="addTemporarySlide({image: 'slides/Enterol2560/E (10).png', type: 'Enterol',})">
     </div>
 `
 
@@ -134,22 +134,22 @@ const c_14 = `
 
 const e_42 = `
 <div class="circle-buttons-container">
-    <img src="./slides/Enterol v3/Е42/Group 81.png" class="circle-buttons" id="circle-btn-1" onclick="addTemporarySlide({image: '/slides/Enterol v3/Е (48).png', type: 'EnterolV3'});" />
-    <img src="./slides/Enterol v3/Е42/Group 82.png" class="circle-buttons" id="circle-btn-2" onclick="addTemporarySlide({image: '/slides/Enterol v3/Е (46).png', type: 'EnterolV3'});" />
-    <img src="./slides/Enterol v3/Е42/Group 83.png" class="circle-buttons" id="circle-btn-3" onclick="addTemporarySlide({image: '/slides/Enterol v3/Е (47).png', type: 'EnterolV3'});" />
-    <img src="./slides/Enterol v3/Е42/Group 84.png" class="circle-buttons" id="circle-btn-4" onclick="addTemporarySlide({image: '/slides/Enterol v3/Е (49).png', type: 'EnterolV3'});" />
-    <img src="./slides/Enterol v3/Е42/Group 85.png" class="circle-buttons" id="circle-btn-5" onclick="addTemporarySlide({image: '/slides/Enterol v3/Е (45).png', type: 'EnterolV3'});" />
-    <img src="./slides/Enterol v3/Е42/Group 86.png" class="circle-buttons" id="circle-btn-6"
+    <img src=".slides/Enterol v3/Е42/Group 81.png" class="circle-buttons" id="circle-btn-1" onclick="addTemporarySlide({image: 'slides/Enterol v3/Е (48).png', type: 'EnterolV3'});" />
+    <img src=".slides/Enterol v3/Е42/Group 82.png" class="circle-buttons" id="circle-btn-2" onclick="addTemporarySlide({image: 'slides/Enterol v3/Е (46).png', type: 'EnterolV3'});" />
+    <img src=".slides/Enterol v3/Е42/Group 83.png" class="circle-buttons" id="circle-btn-3" onclick="addTemporarySlide({image: 'slides/Enterol v3/Е (47).png', type: 'EnterolV3'});" />
+    <img src=".slides/Enterol v3/Е42/Group 84.png" class="circle-buttons" id="circle-btn-4" onclick="addTemporarySlide({image: 'slides/Enterol v3/Е (49).png', type: 'EnterolV3'});" />
+    <img src=".slides/Enterol v3/Е42/Group 85.png" class="circle-buttons" id="circle-btn-5" onclick="addTemporarySlide({image: 'slides/Enterol v3/Е (45).png', type: 'EnterolV3'});" />
+    <img src=".slides/Enterol v3/Е42/Group 86.png" class="circle-buttons" id="circle-btn-6"
          onclick="const slides6 = [
-            { type: 'EnterolV3', image: '/slides/Enterol v3/Е (50).png' },
-            { type: 'EnterolV3', image: '/slides/Enterol v3/Е (51).png' },
-            { type: 'EnterolV3', image: '/slides/Enterol v3/Е (52).png' },
-            { type: 'EnterolV3', image: '/slides/Enterol v3/Е (53).png' },
-            { type: 'EnterolV3', image: '/slides/Enterol v3/Е (54).png' },
-            { type: 'EnterolV3', image: '/slides/Enterol v3/Е (55).png' }
+            { type: 'EnterolV3', image: 'slides/Enterol v3/Е (50).png' },
+            { type: 'EnterolV3', image: 'slides/Enterol v3/Е (51).png' },
+            { type: 'EnterolV3', image: 'slides/Enterol v3/Е (52).png' },
+            { type: 'EnterolV3', image: 'slides/Enterol v3/Е (53).png' },
+            { type: 'EnterolV3', image: 'slides/Enterol v3/Е (54).png' },
+            { type: 'EnterolV3', image: 'slides/Enterol v3/Е (55).png' }
         ];addTemporarySlides(slides6);" />
-    <img src="./slides/Enterol v3/Е42/Group 87.png" class="circle-buttons" id="circle-btn-7" onclick="addTemporarySlide({image: '/slides/Enterol v3/Е (44).png', type: 'EnterolV3'});" />
-    <img src="./slides/Enterol v3/Е42/Group 88.png" class="circle-buttons" id="circle-btn-8" onclick="addTemporarySlide({image: '/slides/Enterol v3/Е (43).png', type: 'EnterolV3'});" />
+    <img src=".slides/Enterol v3/Е42/Group 87.png" class="circle-buttons" id="circle-btn-7" onclick="addTemporarySlide({image: 'slides/Enterol v3/Е (44).png', type: 'EnterolV3'});" />
+    <img src=".slides/Enterol v3/Е42/Group 88.png" class="circle-buttons" id="circle-btn-8" onclick="addTemporarySlide({image: 'slides/Enterol v3/Е (43).png', type: 'EnterolV3'});" />
 </div>
 `
 
@@ -157,27 +157,27 @@ const e_30 = `
     <div class="circle-buttons-container">
         <img src="slides/Enterol v3/Е30/Group 74.png" class="circle-buttons2" id="circle-btn-21"
              onclick="const slidesBtn21 = [
-                { type: 'EnterolV3', image: '/slides/Enterol v3/Е (31).png' },
-                { type: 'EnterolV3', image: '/slides/Enterol v3/Е (32).png' }
+                { type: 'EnterolV3', image: 'slides/Enterol v3/Е (31).png' },
+                { type: 'EnterolV3', image: 'slides/Enterol v3/Е (32).png' }
             ];addTemporarySlides(slidesBtn21);" />
         <img src="slides/Enterol v3/Е30/Group 75.png" class="circle-buttons2" id="circle-btn-22"
              onclick="const slidesBtn22 = [
-                { type: 'EnterolV3', image: '/slides/Enterol v3/Е (33).png' },
-                { type: 'EnterolV3', image: '/slides/Enterol v3/Е (34).png' }
+                { type: 'EnterolV3', image: 'slides/Enterol v3/Е (33).png' },
+                { type: 'EnterolV3', image: 'slides/Enterol v3/Е (34).png' }
             ];addTemporarySlides(slidesBtn22);" />
         <img src="slides/Enterol v3/Е30/Group 76.png" class="circle-buttons2" id="circle-btn-23"
              onclick="const slidesBtn23 = [
-                { type: 'EnterolV3', image: '/slides/Enterol v3/Е (35).png' },
-                { type: 'EnterolV3', image: '/slides/Enterol v3/Е (36).png' }
+                { type: 'EnterolV3', image: 'slides/Enterol v3/Е (35).png' },
+                { type: 'EnterolV3', image: 'slides/Enterol v3/Е (36).png' }
             ];addTemporarySlides(slidesBtn23);" />
-        <img src="slides/Enterol v3/Е30/Group 77.png" class="circle-buttons2" id="circle-btn-24" onclick="addTemporarySlide({image: '/slides/Enterol v3/Е (41).png', type: 'EnterolV3'});" />
+        <img src="slides/Enterol v3/Е30/Group 77.png" class="circle-buttons2" id="circle-btn-24" onclick="addTemporarySlide({image: 'slides/Enterol v3/Е (41).png', type: 'EnterolV3'});" />
         <img src="slides/Enterol v3/Е30/Group 78.png" class="circle-buttons2" id="circle-btn-25"
              onclick="const slidesBtn25 = [
-                { type: 'EnterolV3', image: '/slides/Enterol v3/Е (37).png' },
-                { type: 'EnterolV3', image: '/slides/Enterol v3/Е (38).png' }
+                { type: 'EnterolV3', image: 'slides/Enterol v3/Е (37).png' },
+                { type: 'EnterolV3', image: 'slides/Enterol v3/Е (38).png' }
             ];addTemporarySlides(slidesBtn25);" />
-        <img src="slides/Enterol v3/Е30/Group 79.png" class="circle-buttons2" id="circle-btn-26" onclick="addTemporarySlide({image: '/slides/Enterol v3/Е (39).png', type: 'EnterolV3'});" />
-        <img src="slides/Enterol v3/Е30/Group 80.png" class="circle-buttons" id="circle-btn-27" onclick="addTemporarySlide({image: '/slides/Enterol v3/Е (40).png', type: 'EnterolV3'});" />
+        <img src="slides/Enterol v3/Е30/Group 79.png" class="circle-buttons2" id="circle-btn-26" onclick="addTemporarySlide({image: 'slides/Enterol v3/Е (39).png', type: 'EnterolV3'});" />
+        <img src="slides/Enterol v3/Е30/Group 80.png" class="circle-buttons" id="circle-btn-27" onclick="addTemporarySlide({image: 'slides/Enterol v3/Е (40).png', type: 'EnterolV3'});" />
     </div>
 `
 
@@ -1001,62 +1001,62 @@ const e_20 = `
 `
 
 const m_16 = `
-<div id="m_16-1" class="m_16-buttons" onclick="addTemporarySlide({image: '/slides/Marimer2560/M (20).png', type: 'Marimer'});"></div>
-<div id="m_16-2" class="m_16-buttons" onclick="addTemporarySlide({image: '/slides/Marimer2560/M (20).png', type: 'Marimer'});"></div>
-<div id="m_16-3" class="m_16-buttons" onclick="addTemporarySlide({image: '/slides/Marimer2560/M (21).png', type: 'Marimer'});"></div>
-<div id="m_16-4" class="m_16-buttons" onclick="addTemporarySlide({image: '/slides/Marimer2560/M (19).png', type: 'Marimer'});"></div>
-<div id="m_16-5" class="m_16-buttons" onclick="addTemporarySlide({image: '/slides/Marimer2560/M (18).png', type: 'Marimer'});"></div>
-<div id="m_16-6" class="m_16-buttons" onclick="addTemporarySlide({image: '/slides/Marimer2560/M (17).png', type: 'Marimer'});"></div>
+<div id="m_16-1" class="m_16-buttons" onclick="addTemporarySlide({image: 'slides/Marimer2560/M (20).png', type: 'Marimer'});"></div>
+<div id="m_16-2" class="m_16-buttons" onclick="addTemporarySlide({image: 'slides/Marimer2560/M (20).png', type: 'Marimer'});"></div>
+<div id="m_16-3" class="m_16-buttons" onclick="addTemporarySlide({image: 'slides/Marimer2560/M (21).png', type: 'Marimer'});"></div>
+<div id="m_16-4" class="m_16-buttons" onclick="addTemporarySlide({image: 'slides/Marimer2560/M (19).png', type: 'Marimer'});"></div>
+<div id="m_16-5" class="m_16-buttons" onclick="addTemporarySlide({image: 'slides/Marimer2560/M (18).png', type: 'Marimer'});"></div>
+<div id="m_16-6" class="m_16-buttons" onclick="addTemporarySlide({image: 'slides/Marimer2560/M (17).png', type: 'Marimer'});"></div>
 `
 
 const o_2 = `
-<div id="o_2-1" class="o_2-buttons" onclick="addTemporarySlide({image: '/slides/Otipax2560/O (3).png', type: 'Otipax'});"></div>
-<div id="o_2-2" class="o_2-buttons" onclick="addTemporarySlide({image: '/slides/Otipax2560/O (7).png', type: 'Otipax'});"></div>
-<div id="o_2-3" class="o_2-buttons" onclick="addTemporarySlide({image: '/slides/Otipax2560/O (8).png', type: 'Otipax'});"></div>
-<div id="o_2-4" class="o_2-buttons" onclick="addTemporarySlide({image: '/slides/Otipax2560/O (6).png', type: 'Otipax'});"></div>
-<div id="o_2-5" class="o_2-buttons" onclick="addTemporarySlide({image: '/slides/Otipax2560/O (5).png', type: 'Otipax'});"></div>
+<div id="o_2-1" class="o_2-buttons" onclick="addTemporarySlide({image: 'slides/Otipax2560/O (3).png', type: 'Otipax'});"></div>
+<div id="o_2-2" class="o_2-buttons" onclick="addTemporarySlide({image: 'slides/Otipax2560/O (7).png', type: 'Otipax'});"></div>
+<div id="o_2-3" class="o_2-buttons" onclick="addTemporarySlide({image: 'slides/Otipax2560/O (8).png', type: 'Otipax'});"></div>
+<div id="o_2-4" class="o_2-buttons" onclick="addTemporarySlide({image: 'slides/Otipax2560/O (6).png', type: 'Otipax'});"></div>
+<div id="o_2-5" class="o_2-buttons" onclick="addTemporarySlide({image: 'slides/Otipax2560/O (5).png', type: 'Otipax'});"></div>
 `
 
 
 
 const m_15 = `
     <div class="m_15_button_1"
-        onclick="addTemporarySlide({image: '/slides/Marimer2560/M (2).png', type: 'Marimer',})">
+        onclick="addTemporarySlide({image: 'slides/Marimer2560/M (2).png', type: 'Marimer',})">
     </div>
     <div class="m_15_button_2"
-        onclick="addTemporarySlide({image: '/slides/Marimer2560/M (3).png', type: 'Marimer',})">
+        onclick="addTemporarySlide({image: 'slides/Marimer2560/M (3).png', type: 'Marimer',})">
     </div>
     <div class="m_15_button_3"
-        onclick="addTemporarySlide({image: '/slides/Marimer2560/M (4).png', type: 'Marimer',})">
+        onclick="addTemporarySlide({image: 'slides/Marimer2560/M (4).png', type: 'Marimer',})">
     </div>
     <div class="m_15_button_4"
-        onclick="addTemporarySlide({image: '/slides/Marimer2560/M (6).png', type: 'Marimer',})">
+        onclick="addTemporarySlide({image: 'slides/Marimer2560/M (6).png', type: 'Marimer',})">
     </div>
     <div class="m_15_button_5"
-        onclick="addTemporarySlide({image: '/slides/Marimer2560/M (5).png', type: 'Marimer',})">
+        onclick="addTemporarySlide({image: 'slides/Marimer2560/M (5).png', type: 'Marimer',})">
     </div>
     <div class="m_15_button_6"
-        onclick="addTemporarySlide({image: '/slides/Marimer2560/M (7).png', type: 'Marimer',})">
+        onclick="addTemporarySlide({image: 'slides/Marimer2560/M (7).png', type: 'Marimer',})">
     </div>
 `
 
 const b_6 = `
-    <div id="b_6-cell" onclick="addTemporarySlide({image: '/slides/Bebykol2560/Б (4).png', type: 'Bebykol',})"></div>
+    <div id="b_6-cell" onclick="addTemporarySlide({image: 'slides/Bebykol2560/Б (4).png', type: 'Bebykol',})"></div>
 `
 
 const b_5 = `
-    <div id="b5-title" onclick="addTemporarySlide({image: '/slides/Bebykol2560/Б (9).png', type: 'Bebykol',});"></div>
-    <div id="b5-text" onclick="addTemporarySlide({image: '/slides/Bebykol2560/Б (6).png', type: 'Bebykol', special_animation: 'Special', animation_text: b_6});"></div>
+    <div id="b5-title" onclick="addTemporarySlide({image: 'slides/Bebykol2560/Б (9).png', type: 'Bebykol',});"></div>
+    <div id="b5-text" onclick="addTemporarySlide({image: 'slides/Bebykol2560/Б (6).png', type: 'Bebykol', special_animation: 'Special', animation_text: b_6});"></div>
 `
 
 const c_12 = `
-    <div id="c12-cell1" onclick="addTemporarySlide({image: '/slides/Stresam2560/C (5).png', type: 'Stresam',});"></div>
-    <div id="c12-cell2" onclick="addTemporarySlide({image: '/slides/Stresam2560/C (9).png', type: 'Stresam', special_animation: 'Special', animation_text: c_9});"></div>
+    <div id="c12-cell1" onclick="addTemporarySlide({image: 'slides/Stresam2560/C (5).png', type: 'Stresam',});"></div>
+    <div id="c12-cell2" onclick="addTemporarySlide({image: 'slides/Stresam2560/C (9).png', type: 'Stresam', special_animation: 'Special', animation_text: c_9});"></div>
 `
 
 const c_11 = `
-    <div id="c11-cell1" onclick="addTemporarySlide({image: '/slides/Stresam2560/C (5).png', type: 'Stresam',});"></div>
-    <div id="c11-cell2" onclick="addTemporarySlide({image: '/slides/Stresam2560/C (9).png', type: 'Stresam', special_animation: 'Special', animation_text: c_9});"></div>
+    <div id="c11-cell1" onclick="addTemporarySlide({image: 'slides/Stresam2560/C (5).png', type: 'Stresam',});"></div>
+    <div id="c11-cell2" onclick="addTemporarySlide({image: 'slides/Stresam2560/C (9).png', type: 'Stresam', special_animation: 'Special', animation_text: c_9});"></div>
 `
 
 const c_9 = `
