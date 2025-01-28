@@ -141,7 +141,7 @@ function handleMouseMove(event) {
             if (!human.classList.contains('processed')) {
                 if (!human.classList.contains('painted')) {
                     human.classList.add('painted');
-                    human.style.backgroundImage = 'url(./slides/Asacol/A1/231239.png)';
+                    human.style.backgroundImage = 'url(slides/Asacol/A1/231239.png)';
                 } else {
                     human.classList.remove('painted');
                     human.style.backgroundImage = '';
