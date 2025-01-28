@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Presentation</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="css/styles.css">
+
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+        <div class="reveal">
+            <div class="slides" id="slides-container">
+				<section id="slide-0" data-background-color="#1b2683">
+					<div class="main-container">
+						<h1>Оберіть категорію</h1>
+						<p>Оберіть спеціалізацію, щоб переглянути презентацію в визначеному порядку.<br>
+						Це допоможе вам отримати актуальну інформацію виходячи з вашої <br>
+							професійної діяльності та зробити вибір потрібних матеріалів.</p>
+
+						<div class="main-button-grid">
+							<button class="main-button" id="pediatr" onclick="loadSlides('pediatr')">Педіатр</button>
+							<button class="main-button" id="gastro" onclick="loadSlides('gastro')">Гастро</button>
+							<button class="main-button" id="gastro-kid" onclick="loadSlides('pediatric_gastro')">Гастро дитячий</button>
+							<button class="main-button" id="simey-advance" onclick="loadSlides('advanced_family')">Сімейні "продвинуті"</button>
+							<button class="main-button" id="simey-begin" onclick="loadSlides('beginner_family')">Сімейні "початківці"</button>
+							<button class="main-button" id="lor" onclick="loadSlides('ent')">ЛОР</button>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="js/special.js"></script>
+		<script src="js/mapping.js"></script>
+        <script src="js/scripts.js"></script>
+		<script src="js/subpresentation.js"></script>
+		<script src="js/components/renderAnimation.js"></script>
+		<script src="js/buttons.js"></script>
+		<script>
+		Reveal.initialize({
+		  controls: false,
+		  progress: true,
+		  history: true,
+		  center: true,
+		  transition: 'slide',
+		  transitionSpeed: 'slow',
+		  mobileViewDistance: 2,
+		  mouseWheel: true,
+		  disableLayout: false,
+		  scrollActivationWidth: null,
+		});
+
+		document.addEventListener('DOMContentLoaded', () => {
+			document.querySelector('.reveal').style.background = '#f0f0f0';
+		});
+		</script>
+		<script>
+			document.querySelectorAll('section').forEach(section => {
+				section.style.display = 'flex';
+				section.style.justifyContent = 'center';
+				section.style.alignItems = 'center';
+				section.style.width = '100%';
+				section.style.height = '100%';
+				section.style.boxSizing = 'border-box';
+			});
+
+			function slideToStart() {
+				for (i = 0; i < 100; i++) {
+					Reveal.prev();
+				}
+			}
+
+
+		</script>
+
+	</body>
+</html>

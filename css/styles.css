@@ -1,0 +1,1915 @@
+@font-face {
+    font-family: 'Gotham Pro Bold';
+    src: url('../css/fonts/SGSDTSGothamPro-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../css/fonts/Montserrat-VariableFont_wght.woff2') format('woff2');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins Semi Bold';
+    src: url('../css/fonts/Poppins-SemiBold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    background-color: white;
+}
+
+.main-buttons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 кнопки в строке */
+    column-gap: 10vw; /* Расстояние между кнопками */
+    row-gap: 20vh;
+    justify-items: center; /* Центровка кнопок по горизонтали */
+    position: absolute;
+    justify-content: center;
+
+}
+
+.main-buttons-container button {
+    width: 10vw;
+    min-width: 200px;
+    height: 10vh;
+    min-height: 100px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40%;
+    font-weight: 700;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3%;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-buttons-container button:hover {
+    background-color: #0056b3; /* Темнее при наведении */
+    transform: scale(1.1); /* Увеличение кнопки */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Тень */
+}
+
+.main-buttons-container button:active {
+    transform: scale(1.05); /* Лёгкое уменьшение при нажатии */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Слабее тень */
+}
+
+.invisible-button {
+    position: absolute;
+    top: 0; /* Расположение в левом верхнем углу */
+    left: 0;
+    width: 25%; /* Размер кнопки */
+    height: 25%;
+    background-color: transparent; /* Делает кнопку невидимой */
+    border: none;
+    cursor: pointer;
+    z-index: 1001; /* Убедитесь, что кнопка находится поверх других элементов */
+}
+
+.invisible-left-button {
+    position: absolute;
+    top: 0; /* Расположение в левом верхнем углу */
+    left: 0;
+    width: 25%; /* Размер кнопки */
+    height: 100%;
+    background-color: transparent; /* Делает кнопку невидимой */
+    border: none;
+    cursor: pointer;
+    z-index: 1000; /* Убедитесь, что кнопка находится поверх других элементов */
+}
+
+.invisible-right-button {
+    position: absolute;
+    top: 0; /* Расположение в левом верхнем углу */
+    left: 75%;
+    width: 25%; /* Размер кнопки */
+    height: 100%;
+    background-color: transparent; /* Делает кнопку невидимой */
+    border: none;
+    cursor: pointer;
+    z-index: 1000; /* Убедитесь, что кнопка находится поверх других элементов */
+}
+
+
+
+.section {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box; /* Учитывает padding и border в размерах */
+    overflow: hidden;
+    position: relative;
+}
+
+
+.visit-container {
+    display: flex;
+    flex-direction: column; /* Расположение кнопок в колонку */
+    align-items: center; /* Центрирование кнопок по горизонтали */
+    gap: 10px; /* Расстояние между кнопками */
+    height: 100%; /* Занимает всю высоту родителя (.section) */
+    width: 40%; /* Ширина контейнера */
+    margin: 0; /* Убирает внешние отступы */
+    padding: 2% 0 2% 33%;
+    box-sizing: border-box; /* Учитывает border в размерах */
+    position: absolute; /* Чтобы элемент оставался внутри .section */
+    top: 50%;
+    left: 50%; /* При необходимости можно менять позиции */
+    padding-top: 10%;
+    padding-bottom: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 99999999;
+}
+
+.visit {
+    width: auto; /* Ширина кнопки: 80% от ширины контейнера */
+    /*max-width: 400px;*/
+    max-height: 100%;
+    height: 100%; /* Автоматическая высота для сохранения пропорций */
+    aspect-ratio: 443 / 119; /* Соотношение сторон кнопки */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none; /* Убирает рамку */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.visit:hover {
+    transform: scale(1.05); /* Лёгкое увеличение кнопки при наведении */
+}
+
+.percent-container {
+    display: flex;
+    flex-direction: row; /* Расположение кнопок в колонку */
+    justify-content: center;
+    align-items: center; /* Центрирование кнопок по горизонтали */
+    gap: 2.5%; /* Расстояние между кнопками */
+    height: auto; /* Занимает всю высоту родителя (.section) */
+    max-width: 100%;
+    width: 60%; /* Ширина контейнера */
+    margin: 0; /* Убирает внешние отступы */
+    box-sizing: border-box; /* Учитывает border в размерах */
+    position: absolute; /* Чтобы элемент оставался внутри .section */
+    top: 69%;
+    left: 31.5%; /* При необходимости можно менять позиции */
+    transform: translate(-50%, -50%);
+    z-index: 99999999;
+    overflow: visible;
+}
+
+.percent {
+    width: 17%; /* Ширина кнопки: 80% от ширины контейнера */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    aspect-ratio: 240 / 232; /* Соотношение сторон кнопки */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none; /* Убирает рамку */
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.percent:hover {
+    transform: scale(1.05); /* Лёгкое увеличение кнопки при наведении */
+}
+
+.percent.active {
+    animation: scaleUp 1.5s forwards; /* Анимация увеличения */
+}
+
+/* Анимация для плавного увеличения */
+@keyframes scaleUp {
+    0% {
+        transform: scale(1.05); /* Начальный размер */
+    }
+    100% {
+        transform: scale(1.6); /* Увеличение до 120% */
+    }
+}
+
+
+.background-container {
+    position: relative;
+    width: 100%; /* Пропорционально размеру секции */
+    height: 100%;
+    aspect-ratio: 16 / 9; /* Пропорции фонового изображения */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+section.present {
+    display: flex !important;
+}
+
+section.past {
+    display: flex !important;
+}
+
+section.future {
+    display: flex !important;
+}
+
+section {
+    position: relative; /* Позволяет дочерним элементам позиционироваться относительно родителя */
+    overflow: hidden;   /* Обрезает выходящие элементы, если нужно */
+}
+
+/* Кнопки */
+.dynamic-button {
+    transition: transform 0.3s;
+    z-index: 119999;
+}
+
+.dynamic-button:hover {
+    transform: scale(1.3); /* Увеличение кнопки при наведении */
+}
+/*
+.main-block {
+    width: 90%;
+    height: 50%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    top: 37%;
+    left: 17%;
+    text-align: left;
+}
+
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.column-texts {
+    display: flex;
+    flex-direction: column;
+    gap-row: 0;
+    width: 95%;
+
+}
+.column-images {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 5%;
+}
+
+
+.column-texts p {
+    font-family: 'Gotham Pro Bold', sans-serif;
+    font-size: 50%;
+    line-height: 0;
+    color: white;
+    margin: 1.9%;
+}
+
+.column-images img {
+    height: 7.1%;
+    width: fit-content;
+    margin: 0;
+    background-color: transparent;
+} */
+
+.hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.pill {
+    position: absolute;
+    width: 30%;
+    height: 40%;
+    top: 10%;
+    left: 70%;
+    z-index: 51651515;
+    cursor: pointer;
+}
+
+.bubble-text {
+    position: absolute;
+    width: 13%;
+    height: 17%;
+    top: 33%;
+    left: 67%;
+    z-index: 51651516;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#image1 {
+    position: absolute;
+    width: 115%;
+    height: auto;
+    top: 6%;
+    aspect-ratio: 1450 / 175;
+    transition: opacity 0.5s ease;
+}
+#image1-new {
+    position: absolute;
+    width: 115%;
+    height: auto;
+    top: 7%;
+    aspect-ratio: 1450 / 175;
+    transition: opacity 0.5s ease;
+}
+
+#image2 {
+    position: absolute;
+    width: 20%;
+    height: auto;
+    top: 37%;
+    left: 75%;
+    transition: opacity 0.5s ease;
+    aspect-ratio: 568 / 755;
+}
+
+#image2-new {
+    position: absolute;
+    width: 25%;
+    height: auto;
+    top: 47%;
+    left: 73%;
+    transition: opacity 0.5s ease;
+    aspect-ratio: 983 / 498;
+}
+
+
+.m_1_button_ing {
+    position: absolute;
+    width: 35%;
+    height: 40%;
+    top: 50%;
+    left: 5%;
+    z-index: 51651515;
+    cursor: pointer;
+}
+
+.m_1_button_asp {
+    position: absolute;
+    width: 31%;
+    height: 25%;
+    top: 65%;
+    left: 40%;
+    z-index: 51651515;
+    cursor: pointer;
+}
+
+.m_1_button_izo {
+    position: absolute;
+    width: 23%;
+    height: 25%;
+    top: 65%;
+    left: 71.5%;
+    z-index: 51651515;
+    cursor: pointer;
+}
+
+.circle-buttons {
+    height: 8%;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    z-index: 99999999999999999;
+}
+
+#circle-btn-1 {
+    position: absolute;
+    top: 15%;
+    left: 65%;
+}
+
+#circle-btn-2 {
+    position: absolute;
+    top: 29%;
+    left: 70%;
+}
+
+#circle-btn-3 {
+    position: absolute;
+    top: 46%;
+    left: 70%;
+}
+
+#circle-btn-4 {
+    position: absolute;
+    top: 60%;
+    left: 65%;
+}
+
+#circle-btn-5 {
+    height: 10%;
+    position: absolute;
+    top: 60%;
+    left: -2%;
+}
+
+#circle-btn-6 {
+    position: absolute;
+    top: 46%;
+    left: 2%;
+}
+
+#circle-btn-7 {
+    position: absolute;
+    top: 29%;
+    left: 4%;
+}
+
+#circle-btn-8 {
+    position: absolute;
+    top: 15%;
+    left: 7%;
+}
+
+
+.circle-buttons:hover {
+    transform: scale(1.1);
+}
+
+
+.circle-buttons2 {
+    height: 11%;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    z-index: 99999999999999999;
+}
+
+#circle-btn-21 {
+    position: absolute;
+    top: 22%;
+    left: 68%;
+}
+
+#circle-btn-22 {
+    position: absolute;
+    top: 41%;
+    left: 73%;
+}
+
+#circle-btn-23 {
+    position: absolute;
+    top: 60%;
+    left: 65%;
+}
+
+#circle-btn-24 {
+    height: 15%;
+    position: absolute;
+    top: 67%;
+    left: 42%;
+}
+
+#circle-btn-25 {
+    position: absolute;
+    top: 60%;
+    left: 7%;
+}
+
+#circle-btn-26 {
+    position: absolute;
+    top: 41%;
+    left: 0;
+}
+
+#circle-btn-27 {
+    height: 11%;
+    position: absolute;
+    top: 22%;
+    left: 1%;
+}
+
+
+.circle-buttons2:hover {
+    transform: scale(1.1);
+}
+
+.stresam-buttons-container {
+position: absolute;
+display: flex;
+    flex-direction: column; /* Расположение кнопок в колонку */
+    align-items: center; /* Центрирование кнопок по горизонтали */
+    gap: 2%;
+    height: 41%;
+    width: 23%;
+    top: 54%;
+    left: 82.7%;
+    transform: translate(-50%, -50%);
+    z-index: 99999999999999;
+    box-sizing: border-box;
+}
+
+.stresam-buttons {
+    height: 100%;
+    max-height: 100%;
+    width: auto;
+    aspect-ratio: 609 / 137;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    max-height: 100%;
+    border: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.stresam-buttons:hover {
+    transform: scale(1.05);
+}
+
+
+.stresam-buttons.active {
+    animation: scaleUp 1.5s forwards; /* Анимация увеличения */
+}
+
+
+
+
+.stresam-buttons-container-c14 {
+position: absolute;
+display: flex;
+    flex-direction: column; /* Расположение кнопок в колонку */
+    align-items: center; /* Центрирование кнопок по горизонтали */
+    gap: 7%;
+    height: 38%;
+    width: 23%;
+    top: 54%;
+    left: 82.7%;
+    transform: translate(-50%, -50%);
+    z-index: 99999999999999;
+    box-sizing: border-box;
+}
+
+.stresam-buttons-c14 {
+    height: 100%;
+    max-height: 100%;
+    width: auto;
+    aspect-ratio: 609 / 137;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    max-height: 100%;
+    border: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.stresam-buttons-c14:hover {
+    transform: scale(1.05);
+}
+
+.stresam-buttons-container-c14 img {
+    margin: 5%;
+}
+
+.stresam-buttons-c14.active {
+    animation: scaleUp 1.5s forwards; /* Анимация увеличения */
+}
+
+.visit-container {
+    display: flex;
+    flex-direction: column; /* Расположение кнопок в колонку */
+    align-items: center; /* Центрирование кнопок по горизонтали */
+    gap: 10px; /* Расстояние между кнопками */
+    height: 100%; /* Занимает всю высоту родителя (.section) */
+    width: 40%; /* Ширина контейнера */
+    margin: 0; /* Убирает внешние отступы */
+    padding: 2% 0 2% 33%;
+    box-sizing: border-box; /* Учитывает border в размерах */
+    position: absolute; /* Чтобы элемент оставался внутри .section */
+    top: 50%;
+    left: 50%; /* При необходимости можно менять позиции */
+    padding-top: 10%;
+    padding-bottom: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 99999999;
+}
+
+.visit {
+    width: auto; /* Ширина кнопки: 80% от ширины контейнера */
+    /*max-width: 400px;*/
+    max-height: 100%;
+    height: 100%; /* Автоматическая высота для сохранения пропорций */
+    aspect-ratio: 443 / 119; /* Соотношение сторон кнопки */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none; /* Убирает рамку */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.visit:hover {
+    transform: scale(1.05); /* Лёгкое увеличение кнопки при наведении */
+}
+
+.pill-e9 {
+    position: absolute;
+    width: 30%;
+    height: 43%;
+    top: 10%;
+    left: 70%;
+    z-index: 51651515;
+    cursor: pointer;
+}
+
+.bubble-text-top-e9 {
+    position: absolute;
+    width: 13%;
+    height: 17%;
+    top: 8.5%;
+    left: 63%;
+    z-index: 51651516;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.bubble-text-bottom-e9 {
+    position: absolute;
+    width: 42%;
+    height: 23%;
+    top: 53%;
+    left: 43%;
+    z-index: 51651516;
+    cursor: pointer;
+}
+
+.human-container {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+    z-index: 1414214151251525;
+}
+
+.human {
+    width: 80px;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('/slides/Asacol/A1/21312009.png'); /* Серый человечек */
+    transition: background-image 0.3s ease; /* Плавное закрашивание */
+    z-index: 1414214151251525;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.cell-button {
+    position: absolute;
+    width: 22%;
+    height: 22%;
+    top: 45%;
+    left: 3%;
+    cursor: pointer;
+    z-index: 9999999999999999;
+}
+
+/* =-------------------------------------Серый человечек */
+
+.image-stack1-l-container {
+    position: absolute;  /* Позиционирование относительно родительского контейнера */
+    top: 0;   /* Пример отступа сверху (можно настроить) */
+    left: 0;  /* Пример отступа слева (можно настроить) */
+    z-index: 1;  /* Если нужно, чтобы блок был над другими изображениями */
+  }
+
+
+   .hidden {
+    opacity: 0;
+    visibility: hidden;
+   }
+
+    @keyframes slideX {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-250%);
+    }
+  }
+
+    image-f.img-2 {
+      max-width : 100%;
+      max-height: auto;
+    }
+
+    .slide {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    @keyframes disappear {
+      0% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(var(--random-x), var(--random-y)) rotate(var(--random-rotate));
+      }
+    }
+
+    @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: translate(var(--start-x, 0), var(--start-y, 20px)) scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+      visibility: visible;
+    }
+  }
+
+    .stacked-image, .stacked-image2, .stacked-image3, .stacked-image4, .stacked-image5 {
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .stacked-image1-r, .stacked-image2-r, .stacked-image3-r {
+      opacity: 0; /* Скрыто по умолчанию */
+    }
+
+    .stacked-image1-l, .stacked-image2-l, .stacked-image3-l {
+      opacity: 0; /* Скрыто по умолчанию */
+    }
+
+    .special-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-3%, -80%);
+      width: 41%; /* Ширина контейнера относительно слайда */
+      height: auto; /* Высота автоматически подстраивается под содержимое */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .overlay-image {
+      max-width: 100%;
+      max-height: 100%;
+      position: relative;
+      top: 5px;
+      object-fit: contain;
+      border: none;
+      border-radius: 0px;
+    }
+
+    @keyframes slideDown {
+    0% {
+      transform: translate(-50%, -180%);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, -170%);
+      opacity: 0;
+    }
+  }
+    @keyframes slideUp1 {
+    0% {
+      transform: translate(-235%, -240%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-235%, -250%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp2 {
+    0% {
+      transform: translate(-50%, -240%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-50%, -250%);
+      opacity: 1;
+    }
+  }
+
+
+  @keyframes growAndFadeIn {
+    0% {
+        transform: translate(-300%, -85%) rotate(341deg) scaleX(0); /* Стрелка скрыта */
+        opacity: 0;
+    }
+    10% {
+        transform: translate(-300%, -85%) rotate(341deg) scaleX(0.1); /* Стрелка немного растет */
+        opacity: 0.1;
+    }
+    20% {
+        transform: translate(-300%, -85%) rotate(341deg) scaleX(0.2); /* Стрелка продолжает расти */
+        opacity: 0.2;
+    }
+    30% {
+        transform: translate(-300%, -85%) rotate(341deg) scaleX(0.3); /* Стрелка продолжает расти */
+        opacity: 0.3;
+    }
+    40% {
+        transform: translate(-300%, -85%) rotate(341deg) scaleX(0.4); /* Стрелка растет дальше */
+        opacity: 0.4;
+    }
+    50% {
+        transform: translate(-300%, -85%) rotate(341deg) scaleX(0.5); /* Стрелка наполовину растет */
+        opacity: 0.5;
+    }
+    60% {
+        transform: translate(-300%, -85%) rotate(341deg) scaleX(0.6); /* Стрелка больше растет */
+        opacity: 0.6;
+    }
+    70% {
+        transform: translate(-300%, -85%) rotate(341deg) scaleX(0.7); /* Стрелка продолжает расти */
+        opacity: 0.7;
+    }
+    80% {
+        transform: translate(-300%, -85%) rotate(341deg) scaleX(0.8); /* Стрелка почти до конца растет */
+        opacity: 0.8;
+    }
+    90% {
+        transform: translate(-300%, -85%) rotate(341deg) scaleX(0.9); /* Стрелка почти полностью видна */
+        opacity: 0.9;
+    }
+    100% {
+        transform: translate(-300%, -85%) rotate(341deg) scaleX(1); /* Стрелка полностью видна и растянута */
+        opacity: 1;
+    }
+}
+  .special-content .arr-1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-300%, -85%) rotate(341deg) scale(0.8);
+        max-width: 80px;
+        width: 95%;
+        opacity: 0;
+  }
+
+    .arr-1.growAndFadeIn {
+        animation: growAndFadeIn 1s ease-in-out forwards;
+}
+
+  .special-content .text-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -180%);
+    max-width: 150px;
+    min-width: 100px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+    .special-content .text-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-235%, -240%);
+    max-width: 150px;
+    min-width: 100px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .special-content .text-3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -180%);
+    max-width: 150px;
+    min-width: 100px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+    .image-stack {
+      position: absolute;
+      top: 53%; /* Центрируем по вертикали */
+      left: 63%; /* Центрируем по горизонтали */
+      transform: translate(-50%, -50%); /* Смещаем центр контейнера в точку пересечения */
+      max-width: 200px; /* Задаем ширину контейнера */
+      width: 4vw;
+      min-width: 180px;
+      height: 200px; /* Задаем высоту контейнера */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .image-stack2 {
+      position: absolute;
+      top: 50%; /* Центрируем по вертикали */
+      left: 50%; /* Центрируем по горизонтали */
+      transform: translate(-50%, -50%); /* Смещаем центр контейнера в точку пересечения */
+      max-width: 200px; /* Задаем ширину контейнера */
+      min-width: 60px;
+      width: 4vw;
+      height: 200px; /* Задаем высоту контейнера */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: rotateImages 4s infinite ease-in-out;
+      z-index : 9;
+    }
+
+    .image-stack3 {
+      position: absolute;
+      top: 50%; /* Центрируем по вертикали */
+      left: 50%; /* Центрируем по горизонтали */
+      transform: translate(-50%, -50%); /* Смещаем центр контейнера в точку пересечения */
+      width: 200px; /* Задаем ширину контейнера */
+      height: 200px; /* Задаем высоту контейнера */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index : 8;
+    }
+
+    .image-stack4 {
+      position: absolute;
+      top: 50%; /* Центрируем по вертикали */
+      left: 50%; /* Центрируем по горизонтали */
+      transform: translate(-50%, -50%); /* Смещаем центр контейнера в точку пересечения */
+      max-width: 200px; /* Задаем ширину контейнера */
+      min-width: 25px;
+      max-height: 200px;
+      min-height: 100px;
+      height: 4vw;
+      width: 4vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index : 7;
+    }
+
+     .image-stack5 {
+      position: absolute;
+      top: 50%; /* Центрируем по вертикали */
+      left: 50%; /* Центрируем по горизонтали */
+      transform: translate(-50%, -50%); /* Смещаем центр контейнера в точку пересечения */
+      max-width: 200px; /* Задаем ширину контейнера */
+      height: 200px; /* Задаем высоту контейнера */
+      min-width: 10px;
+      min-height: 150px;
+      height: 2vw;
+      width: 2vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index : 6;
+    }
+
+    .image-stack1-r {
+      position: absolute;
+      top: 50%; /* Центрируем по вертикали */
+      left: 50%; /* Центрируем по горизонтали */
+      transform: translate(-50%, -50%); /* Смещаем центр контейнера в точку пересечения */
+      max-width: 200px; /* Задаем ширину контейнера */
+      min-width: 160px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index : 9;
+    }
+
+    .image-stack2-r {
+      position: absolute;
+      top: 50%; /* Центрируем по вертикали */
+      left: 50%; /* Центрируем по горизонтали */
+      transform: translate(-50%, -50%); /* Смещаем центр контейнера в точку пересечения */
+      max-width: 200px; /* Задаем ширину контейнера */
+      max-height: 200px; /* Задаем высоту контейнера */
+      width: 95%;
+      height: 95%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index : 7;
+    }
+
+    .image-stack3-r {
+      position: absolute;
+      top: 50%; /* Центрируем по вертикали */
+      left: 50%; /* Центрируем по горизонтали */
+      transform: translate(-50%, -50%); /* Смещаем центр контейнера в точку пересечения */
+      height: 95%; /* Задаем высоту контейнера */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index : 8;
+    }
+
+    .image-stack1-l {
+      position: absolute;
+      top: 60%;
+      left: 10%;
+      transform: translate(-35%, -55%); /* Смещаем центр контейнера в точку пересечения */
+      max-width: 200px; /* Задаем ширину контейнера */
+      min-width: 100px;
+      height: 200px; /* Задаем высоту контейнера */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index : 9;
+    }
+
+    .image-stack2-l {
+      position: absolute;
+      top: 60%;
+      left: 10%;
+      transform: translate(-50%, -50%); /* Смещаем центр контейнера в точку пересечения */
+      max-width: 200px; /* Задаем ширину контейнера */
+      max-height: 200px; /* Задаем высоту контейнера */
+      width: 20vw;
+      height: 10vh;
+      min-width: 160px;
+      min-height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index : 8;
+    }
+
+    .image-stack3-l {
+      position: absolute;
+      top: 60%;
+      left: 10%;
+      transform: translate(-40%, -60%);
+      max-width: 200px;
+      max-height: 200px;
+      width: 95%;
+      height: 10vh;
+      min-width: 160px;
+      min-height: 150px;
+      z-index: 7;
+    }
+
+
+     .image-f.img-1 {
+      display: inline-block; /* Для корректного применения transform */
+      transition: transform 1s ease-in-out; /* Дополнительный плавный переход */
+      position: absolute;
+      max-width: 115px;
+      height: auto; /* Высота изображения */
+      object-fit: cover; /* Изображение вписывается в контейнер */
+    }
+
+    .image-f.img-2 {
+      max-width: 95%;
+    }
+
+   div.image-stack > img.stacked-image {
+      position: relative;
+      max-width: 15px;
+      height: auto; /* Высота изображения */
+      object-fit: cover; /* Изображение вписывается в контейнер */
+    }
+
+    .special-content .stacked-image2 {
+      position: relative;
+      width: 40px;
+      height: auto; /* Высота изображения */
+      object-fit: cover; /* Изображение вписывается в контейнер */
+    }
+
+    .special-content .stacked-image3 {
+      position: relative;
+      width: 40px;
+      height: auto; /* Высота изображения */
+      object-fit: cover; /* Изображение вписывается в контейнер */
+    }
+
+    .special-content .stacked-image4 {
+      position: relative;
+      width: 10px;
+      height: auto; /* Высота изображения */
+      object-fit: cover; /* Изображение вписывается в контейнер */
+    }
+
+    .special-content .stacked-image5 {
+      position: relative;
+      width: 15px;
+      height: auto; /* Высота изображения */
+      object-fit: cover; /* Изображение вписывается в контейнер */
+    }
+     div.image-stack1-r > img.stacked-image1-r {
+      position: relative;
+      max-width: 40px;
+      width: 3.5vw;
+      min-width: 40px;
+      height: auto; /* Высота изображения */
+      object-fit: cover; /* Изображение вписывается в контейнер */
+    }
+
+    div.image-stack2-r > img.stacked-image2-r {
+      position: relative;
+      max-width: 40px;
+      width: 95%;
+      height: auto; /* Высота изображения */
+      object-fit: cover; /* Изображение вписывается в контейнер */
+    }
+
+    .stacked-image3-r {
+      position: relative;
+      width: 20px;
+      height: auto; /* Высота изображения */
+      object-fit: cover; /* Изображение вписывается в контейнер */
+    }
+
+      div.image-stack1-l > img.stacked-image1-l {
+      position: relative;
+      transform: translate(-50%, -50%);
+      max-width: 40px;
+      width: 95%;
+      height: auto;
+      object-fit: cover;
+    }
+    div.image-stack2-l > img.stacked-image2-l {
+      max-width: 10px;
+      width: 95%;
+      position: relative;
+      height: auto; /* Высота изображения */
+      object-fit: cover; /* Изображение вписывается в контейнер */
+    }
+
+    div.image-stack3-l > img.stacked-image3-l {
+      max-width: 30px;
+      width: 95%;
+      position: relative;
+      height: auto; /* Высота изображения */
+      object-fit: cover; /* Изображение вписывается в контейнер */
+    }
+
+    @keyframes rotateImage {
+      0% {
+        transform: rotate(0deg); /* Начальный угол */
+      }
+      100% {
+        transform: rotate(360deg); /* Полный поворот на 360 градусов */
+      }
+    }
+
+    .stacked-image3-l.img-1 {
+      top: -1%;
+      left: 35%;
+      --start-x: 50%;
+      --start-y: -100%;
+    }
+
+    .stacked-image3-l.img-2 {
+      top: -15%;
+      left: 45%;
+      --start-x: 50%;
+      --start-y: -100%;
+    }
+
+      .stacked-image3-l.img-3 {
+      top: 30%;
+      left: 5%;
+      --start-x: 50%;
+      --start-y: -100%;
+    }
+
+      .stacked-image3-l.img-4 {
+      top: 10%;
+      left: 4%;
+      --start-x: 50%;
+      --start-y: -100%;
+    }
+
+    .stacked-image2-l.img-1 {
+      top: -15%;
+      left: 45%;
+      --start-x: 50%;
+      --start-y: -100%;
+  }
+    .stacked-image2-l.img-2 {
+      top: -10%;
+      left: 30%;
+      --start-x: 50%;
+      --start-y: -100%;
+  }
+        .stacked-image2-l.img-3 {
+      top: 0%;
+      left: 8%;
+      --start-x: 50%;
+      --start-y: -100%;
+  }
+        .stacked-image2-l.img-4 {
+      top: -20%;
+      left: 5%;
+      --start-x: 50%;
+      --start-y: -100%;
+  }
+        .stacked-image2-l.img-5 {
+      top: -22%;
+      left: 33%;
+      --start-x: 50%;
+      --start-y: -100%;
+  }
+      .stacked-image2-l.img-6 {
+      top: -20%;
+      left: 10%;
+      --start-x: 50%;
+      --start-y: -100%;
+  }
+    .stacked-image2-l.img-7 {
+      top: 2%;
+      left: 22%;
+      --start-x: 50%;
+      --start-y: -100%;
+  }
+
+    .stacked-image1-l.img-1 {
+        top: 10%;
+        left: 110%;
+        --start-x: 50%;
+        --start-y: -100%;
+    }
+
+     .stacked-image1-l.img-2 {
+        top: -2%;
+        left: 80%;
+        --start-x: 50%;
+        --start-y: -100%;
+    }
+
+    .stacked-image1-l.img-3 {
+      top: 0%;
+      left: 0%;
+      --start-x: 50%;
+      --start-y: -100%;
+    }
+
+    div.image-stack1-l > img.stacked-image1-l.img-4 {
+      max-width: 25px;
+      top: -15%;
+      left: -20%;
+      --start-x: 50%;
+      --start-y: -100%;
+  }
+    .stacked-image1-l.img-5 {
+      top: -20%;
+      left: -20%;
+      --start-x: 50%;
+      --start-y: -100%;
+  }
+
+    .stacked-image1-r.img-1 {
+      top: -10%;
+      left: 40%;
+      --start-x: 50%;
+      --start-y: -100%;
+    }
+
+    .stacked-image1-r.img-2 {
+      top: 0%;
+      left: -15%;
+      --start-x: -50%;
+      --start-y: 100%;
+    }
+
+    .stacked-image1-r.img-3 {
+      top: -6%;
+      left: -30%;
+      --start-x: -100%;
+      --start-y: -50%;
+    }
+
+    .stacked-image2-r.img-1 {
+      top: -18%;
+      left: 35%;
+      --start-x: 50%;
+      --start-y: -100%;
+    }
+
+    .stacked-image2-r.img-2 {
+      top: -17%;
+      left: -8%;
+      --start-x: -50%;
+      --start-y: 100%;
+    }
+
+    .stacked-image2-r.img-3 {
+        width: 30px;
+        top: 3%;
+        left: -14%;
+      --start-x: -100%;
+      --start-y: -50%;
+    }
+
+    .stacked-image3-r.img-1 {
+        width: 10px;
+        top: -15%;
+        left: -14%;
+      --start-x: -100%;
+      --start-y: -50%;
+    }
+
+     .stacked-image3-r.img-2 {
+        width: 15px;
+        top: 10%;
+        left: -14%;
+      --start-x: -100%;
+      --start-y: -50%;
+    }
+
+     .stacked-image3-r.img-3 {
+        width: 10px;
+        top: 15%;
+        left: -3%;
+      --start-x: -100%;
+      --start-y: -50%;
+    }
+
+    .stacked-image5.img-1 {
+      top: -20%;
+      left: -8%;
+      animation: rotateImage 10s linear infinite; /* Плавное вращение */
+    }
+
+    .stacked-image5.img-2 {
+      top: 6%;
+      left: 3%;
+      animation: rotateImage 12s linear infinite; /* Плавное вращение, может быть другая продолжительность */
+    }
+
+    .stacked-image5.img-3 {
+      top: -9%;
+      left: 19%;
+      animation: rotateImage 15s linear infinite; /* Плавное вращение */
+    }
+
+     .stacked-image4.img-1 {
+       width : 40px;
+       top: -12%;
+       left: 0%;
+     }
+
+      .stacked-image4.img-2 {
+       width : 18px;
+       top: -6%;
+       left: -6%;
+     }
+
+      .stacked-image4.img-3 {
+      width: 18px;
+      top: -18%;
+      left: 6.5%;
+     }
+
+    .stacked-image3.img-1 {
+       top: 10%;
+       left: 20%;
+       animation: rotateImage1 4s infinite ease-in-out;
+     }
+
+    .stacked-image3.img-2 {
+       top: -20%;
+       left: 6%;
+       animation: rotateImage2 4s infinite ease-in-out;
+     }
+
+    .stacked-image3.img-3 {
+       top: -12%;
+       left: -8%;
+       animation: rotateImage2 4s infinite ease-in-out;
+     }
+
+     .stacked-image2.img-1 {
+        width: 30px;
+        top: -6%;
+        left: -21%;
+       animation: rotateImage1 4s infinite ease-in-out;
+     }
+
+     .stacked-image2.img-2 {
+       top: 6%;
+       left: 6%;
+       animation: rotateImage2 4s infinite ease-in-out;
+     }
+
+    .stacked-image.img-1 {
+      top: 11%;
+      left: -5%;
+    }
+
+    .stacked-image.img-3 {
+      top: 14.5%;
+      left: -6%;
+    }
+
+    .stacked-image.img-4 {
+      width: 17px;
+      top: 15%;
+      left: -6.5%;
+    }
+
+    .stacked-image.img-5 {
+      width: 17px;
+      top: 12.5%;
+      left: -7.5%;
+    }
+
+    .stacked-image.img-6 {
+      width: 14px;
+      top: 7%;
+      left: -8.5%;
+    }
+
+    .stacked-image.img-7 {
+      width: 11px;
+      top: -1.5%;
+      left: -12%;
+    }
+
+    .stacked-image.img-8 {
+      width: 15px;
+      top: -11%;
+      left: -21%;
+    }
+
+    .stacked-image.img-9 {
+      width: 18px;
+      top: -18%;
+      left: -36%;
+    }
+
+     .stacked-image.img-10 {
+      width: 12px;
+      top: 0;
+      left: -76%;
+    }
+
+
+     @keyframes move {
+      0% {
+        transform: translate(-50%, -50%) translateX(0) translateY(0);
+      }
+      50% {
+        transform: translate(-50%, -50%) translateX(5px) translateY(5px);
+      }
+      100% {
+        transform: translate(-50%, -50%) translateX(-5px) translateY(-5px);
+      }
+    }
+
+    @keyframes rotateImage1 {
+      0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(15deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    @keyframes rotateImage2 {
+      0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(-15deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+  @keyframes floatEffect {
+    0% {
+      transform: translate(0, 0); /* Начальное положение */
+      visibility: visible;
+      opacity: 1;
+    }
+    25% {
+      transform: translate(4px, 0px); /* Легкое смещение */
+      visibility: visible;
+      opacity: 1;
+    }
+    50% {
+      transform: translate(0px, -8px); /* Легкое смещение */
+      visibility: visible;
+      opacity: 1;
+    }
+    100% {
+      transform: translate(0, 0); /* Возврат в исходное положение */
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  @keyframes floatEffect2 {
+    0% {
+      transform: translate(0, 0); /* Начальное положение */
+      visibility: visible;
+      opacity: 1;
+    }
+    50% {
+      transform: translate(7px, 0px); /* Легкое смещение */
+      visibility: visible;
+      opacity: 1;
+    }
+    100% {
+      transform: translate(0, 0); /* Возврат в исходное положение */
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .float2 {
+    animation: floatEffect 15s infinite ease-in-out;
+  }
+
+  .float {
+    animation: floatEffect2 15s infinite ease-in-out;
+  }
+
+.main-block {
+    width: 90%;
+    height: 50%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    top: 30%;
+    left: 12%;
+    text-align: left;
+}
+
+
+.image-group img {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.text-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.text-image.visible .text-image {
+    opacity: 1;
+}
+
+.text-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5%;
+}
+
+.text-row p {
+    font-family: 'Gotham Pro Bold', sans-serif;
+    font-size: 40%;
+    margin: 0;
+    line-height: 1;
+    z-index: 9999999999999;
+}
+
+
+.image-group {
+    position: absolute;
+    left: 15%;
+    flex: 2;
+    height: 7%;
+    width: fir-content;
+    aspect-ratio: 240 / 232;
+}
+
+.reveal video {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.main-container {
+    background-color: #0A1152;
+    border-radius: 20px;
+    padding: 3% 5%;
+    width: 95%;
+    height: 75%;
+    text-align: center;
+    color: white;
+    margin: 7%;
+}
+
+.main-container h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-transform: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.main-container p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 27%;
+
+}
+
+.main-button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    height: 70%;
+}
+
+.main-button {
+    background-color: #cc4c9d;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins Semi Bold', sans-serif;
+    font-size: 45%;
+}
+
+.main-button:hover {
+    transform: scale(1.05);
+    background-color: #d81b60;
+}
+
+.main-button:active {
+    transform: scale(0.95);
+}
+
+.m_16-buttons {
+    width: 13%;
+    height: 17%;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9999999999999999999999;
+}
+
+#m_16-1 {
+    position: absolute;
+    top: 22%;
+    left: 53%;
+}
+
+#m_16-2 {
+    position: absolute;
+    top: 41%;
+    left: 53%;
+}
+
+#m_16-3 {
+    position: absolute;
+    top: 59%;
+    left: 53%;
+}
+#m_16-4 {
+    position: absolute;
+    top: 59%;
+    left: 3%;
+}
+#m_16-5 {
+    position: absolute;
+    top: 41%;
+    left: 3%;
+}
+#m_16-6 {
+    position: absolute;
+    top: 22%;
+    left: 3%;
+}
+
+.o_2-buttons {
+    width: 19%;
+    height: 33%;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9999999999999999999999;
+}
+
+#o_2-1 {
+    position: absolute;
+    top: 48%;
+    left: 3%;
+}
+#o_2-2 {
+    position: absolute;
+    top: 27%;
+    left: 22%;
+}
+
+#o_2-3 {
+    position: absolute;
+    top: 48%;
+    left: 40%;
+}
+#o_2-4 {
+    position: absolute;
+    top: 27%;
+    left: 59%;
+}
+#o_2-5 {
+    position: absolute;
+    top: 48%;
+    left: 77%;
+}
+
+.m_15_button_1 {
+    position: absolute;
+    width: 12%;
+    height: 35%;
+    top: 48%;
+    left: 5%;
+    z-index: 51651515;
+    cursor: pointer;
+}
+
+.m_15_button_2 {
+    position: absolute;
+    width: 11%;
+    height: 35%;
+    top: 49%;
+    left: 18%;
+    z-index: 51651515;
+    cursor: pointer;
+}
+
+.m_15_button_3 {
+    position: absolute;
+    width: 11%;
+    height: 35%;
+    top: 49%;
+    left: 30%;
+    z-index: 51651515;
+    cursor: pointer;
+}
+
+.m_15_button_4 {
+    position: absolute;
+    width: 15%;
+    height: 17%;
+    top: 63%;
+    left: 41%;
+    z-index: 51651515;
+    cursor: pointer;
+}
+
+
+.m_15_button_5 {
+    position: absolute;
+    width: 15%;
+    height: 17%;
+    top: 59%;
+    left: 56%;
+    z-index: 51651515;
+    cursor: pointer;
+}
+
+.m_15_button_6 {
+    position: absolute;
+    width: 22%;
+    height: 17%;
+    top: 59%;
+    left: 71%;
+    z-index: 51651515;
+    cursor: pointer;
+}
+
+#b5-title {
+    position: absolute;
+    width: 48%;
+    height: 6%;
+    opacity: 30%;
+    top: 10.7%;
+    left: 48.7%;
+    cursor: pointer;
+    z-index: 999999999999999999;
+}
+
+#b5-text {
+    position: absolute;
+    width: 38.7%;
+    height: 3%;
+    opacity: 30%;
+    top: 43.2%;
+    left: 43%;
+    cursor: pointer;
+    z-index: 999999999999999999;
+}
+
+#b_6-cell {
+    position: absolute;
+    width: 11%;
+    height: 5%;
+    opacity: 30%;
+    top: 50%;
+    left: 4%;
+    cursor: pointer;
+    z-index: 999999999999999999;
+}
+
+#c12-cell1 {
+    position: absolute;
+    width: 9%;
+    height: 5%;
+    opacity: 30%;
+    top: 38%;
+    left: 35%;
+    cursor: pointer;
+    z-index: 999999999999999999;
+}
+
+#c12-cell2 {
+    position: absolute;
+    width: 16%;
+    height: 5%;
+    opacity: 30%;
+    top: 34%;
+    left: 53.5%;
+    cursor: pointer;
+    z-index: 999999999999999999;
+}
+
+#c11-cell1 {
+    position: absolute;
+    width: 9%;
+    height: 5%;
+    opacity: 30%;
+    top: 38%;
+    left: 38.3%;
+    cursor: pointer;
+    z-index: 999999999999999999;
+}
+
+#c11-cell2 {
+    position: absolute;
+    width: 16%;
+    height: 5%;
+    opacity: 30%;
+    top: 34%;
+    left: 53.5%;
+    cursor: pointer;
+    z-index: 999999999999999999;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  *:focus,
+  *:active {
+    outline: none;
+    box-shadow: none;
+  }
+
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent; /* Убирает серую/синюю подсветку */
+  }
+}
