@@ -9,7 +9,6 @@ function checkSpecAnimation(slide) {
 function generateSlides(slideSet) {
     console.log("loadSlidesHoriz");
     console.log("slideSet", slideSet);
-
     return slideSet.map((slide, index) => {
         // Проверка наличия специальной анимации
         const animationText = checkSpecAnimation(slide);
@@ -20,6 +19,7 @@ function generateSlides(slideSet) {
                 data-type="${slide.type || ''}"
                 data-index="${index + 1}"
                 id="slide-${index + 1}"
+                class="slide-container"
                 style="
                     display: flex !important;
                     width: 100%;
@@ -28,8 +28,9 @@ function generateSlides(slideSet) {
                     align-items: center;
                 ">
                 <div class="background-container"
+                    data-src="${slide.image}" 
                     style="
-                        background-image: url('${slide.image}');
+                        background-image: none;
                     ">
                     <button class="invisible-button" onclick="Reveal.slide(0);"></button>
                     <button class="invisible-left-button" onclick="Reveal.prev();"></button>
@@ -41,6 +42,17 @@ function generateSlides(slideSet) {
     }).join('');
 }
 
+function lazyLoadBackgrounds() {
+    const containers = document.querySelectorAll('.background-container[data-src]');
+    containers.forEach(container => {
+        const isVisible = container.closest('section')?.classList.contains('present');
+        if (isVisible && !container.dataset.loaded) {
+            const src = container.getAttribute('data-src');
+            container.style.backgroundImage = `url('${src}')`;
+            container.setAttribute('data-loaded', 'true');
+        }
+    });
+}
 
 function loadSlides(setName) {
     window.imageIndex = 0;
@@ -49,25 +61,33 @@ function loadSlides(setName) {
     const slidesContainer = document.getElementById('slides-container');
     const reveal = document.querySelector('.reveal');
 
+    // Удаление старых слайдов
     Array.from(slidesContainer.children).forEach((slide, index) => {
         if (index > 0) {
             slidesContainer.removeChild(slide);
         }
     });
 
+    // Генерация новых слайдов
     const newSlides = generateSlides(mapping[setName]);
-    console.log(newSlides)
+    console.log(newSlides);
 
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = newSlides;
 
+    // Добавление новых слайдов в контейнер
     Array.from(tempDiv.children).forEach(slide => {
         slidesContainer.appendChild(slide);
-
     });
 
+    // Применяем стиль для reveal
     reveal.style.display = 'flex';
 
+    // Ленивый запуск загрузки фонов
+    Reveal.on('slidechanged', lazyLoadBackgrounds);
+    Reveal.on('ready', lazyLoadBackgrounds);
+
+    // Синхронизация с Reveal.js
     Reveal.next();
     Reveal.sync(); // Синхронизация
     Reveal.layout();
@@ -247,18 +267,28 @@ function applyStyles() {
         window.innerWidth >= 1995 && window.innerWidth <= 2005 &&
         window.innerHeight >= 1195 && window.innerHeight <= 1205;
 
+    const isTablet1315x650 =
+        window.innerWidth >= 1315 && window.innerWidth <= 1320 &&
+        window.innerHeight >= 650 && window.innerHeight <= 657;
+
+
     // Если ширина больше высоты (ориентация landscape)
     if (window.innerWidth > window.innerHeight) {
         if (isTablet2304x1440) {
-            document.body.style.transform = "scale(1.21)";
+            document.body.style.transform = "scale(2.8)";
             document.body.style.inset = "2% 2% auto 0";
         } else if (isTablet2304x1440_minni) {
-            document.body.style.transform = "scale(1.21)";
+            document.body.style.transform = "scale(2.8)";
             document.body.style.inset = "2% 2% auto 0";
         } else if (isTablet2000x1200) {
-            document.body.style.transform = "scale(1.21)";
+            document.body.style.transform = "scale(2.8)";
             document.body.style.inset = "2% 2% auto 0";
-        } else {
+        }else if (isTablet1315x650) {
+            document.body.style.transform = "scale(2.8)";
+            document.body.style.inset = "2% 2% auto 0";
+        }
+        
+        else {
             // Сбрасываем стили, если ни одно из условий не выполняется
             document.body.style.transform = "";
             document.body.style.inset = "";
