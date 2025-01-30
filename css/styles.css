@@ -1903,16 +1903,15 @@ display: flex;
   width: 90%;
   height: 50%;
   margin: 0;
-  display: flex;
-  justify-content: center;
+  display: flex
+;
   align-items: center;
-  position: relative;
+  position: absolute;
   cursor: pointer;
   top: 30%;
-  left: 12%;
+  left: 30%;
   text-align: left;
-
-  -webkit-tap-highlight-color: transparent; /* Убирает подсветку */
+  -webkit-tap-highlight-color: transparent;
 }
 
 .main-block:focus,
