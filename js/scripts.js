@@ -107,7 +107,7 @@ function addButtonsToBackgroundContainer(slideId, buttons) {
                     btn.id = button.id;
                     btn.style.position = 'absolute';
                     btn.style.left = `${button.x}%`;
-                    btn.style.top = `${button.y}%`;
+                    btn.style.top = `92%`;
                     btn.style.width = `${button.width}%`;
                     btn.style.height = `${button.height}%`;
                     btn.style.background = `url(${button.icon}) no-repeat center`;
@@ -271,7 +271,29 @@ function applyStyles() {
         window.innerWidth >= 1315 && window.innerWidth <= 1320 &&
         window.innerHeight >= 650 && window.innerHeight <= 657;
 
-    
+    // Соотношение сторон, например 16:9
+    const aspectRatio = 16 / 9;
+
+    // Вычисляем новый масштаб
+    let scaleFactor = window.innerHeight / 1000; // Пусть 1000px - это 100% высоты
+
+    // Применяем масштабирование и следим за пропорциями
+    let container = document.getElementById('container'); // замените на id вашего контейнера
+    if (container) {
+        let newWidth = window.innerHeight * aspectRatio;
+
+        // Если ширина выходит за пределы экрана, корректируем по ширине
+        if (newWidth > window.innerWidth) {
+            newWidth = window.innerWidth;
+            scaleFactor = window.innerWidth / 1000; // Масштабируем по ширине
+        }
+
+        // Применяем стили для контейнера
+        container.style.width = `${newWidth}px`;
+        container.style.height = `${window.innerHeight}px`; // Высота всегда 100%
+        container.style.transform = `scale(${scaleFactor})`;
+        container.style.transformOrigin = 'top left'; // Масштабируем от верхнего левого угла
+    }
 }
 
 // Проверяем размеры экрана при загрузке страницы

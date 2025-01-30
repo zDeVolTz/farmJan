@@ -112,22 +112,21 @@ body {
 
 
 .visit-container {
-    display: flex;
-    flex-direction: column; /* Расположение кнопок в колонку */
-    align-items: center; /* Центрирование кнопок по горизонтали */
-    gap: 10px; /* Расстояние между кнопками */
-    height: 100%; /* Занимает всю высоту родителя (.section) */
-    width: 40%; /* Ширина контейнера */
-    margin: 0; /* Убирает внешние отступы */
-    padding: 2% 0 2% 33%;
-    box-sizing: border-box; /* Учитывает border в размерах */
-    position: absolute; /* Чтобы элемент оставался внутри .section */
-    top: 50%;
-    left: 50%; /* При необходимости можно менять позиции */
-    padding-top: 10%;
-    padding-bottom: 10%;
-    transform: translate(-50%, -50%);
-    z-index: 99999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  height: 100%;
+  width: 60%;
+  margin: 0;
+  padding: 4% 0 5% 33%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding-bottom: 4%;
+  transform: translate(-50%, -50%);
+  z-index: 99999999;
 }
 
 .visit {
@@ -161,7 +160,7 @@ body {
     margin: 0; /* Убирает внешние отступы */
     box-sizing: border-box; /* Учитывает border в размерах */
     position: absolute; /* Чтобы элемент оставался внутри .section */
-    top: 69%;
+    top: 72%;
     left: 31.5%; /* При необходимости можно менять позиции */
     transform: translate(-50%, -50%);
     z-index: 99999999;
@@ -202,10 +201,11 @@ body {
 
 .background-container {
   position: relative;
-  width: 80%; /* Центрируем с учетом margin */
-  height: 0;
-  padding-top: 56.25%; /* 16:9 = (9/16)*100 */
-  background-size: 100% 90%;
+  width: 80%;
+  height: 100% !important;
+  /* height: 0; */
+  /* padding-top: 56.25%; */
+  background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
   margin: 0 auto;
@@ -597,24 +597,6 @@ display: flex;
     animation: scaleUp 1.5s forwards; /* Анимация увеличения */
 }
 
-.visit-container {
-    display: flex;
-    flex-direction: column; /* Расположение кнопок в колонку */
-    align-items: center; /* Центрирование кнопок по горизонтали */
-    gap: 10px; /* Расстояние между кнопками */
-    height: 100%; /* Занимает всю высоту родителя (.section) */
-    width: 40%; /* Ширина контейнера */
-    margin: 0; /* Убирает внешние отступы */
-    padding: 2% 0 2% 33%;
-    box-sizing: border-box; /* Учитывает border в размерах */
-    position: absolute; /* Чтобы элемент оставался внутри .section */
-    top: 50%;
-    left: 50%; /* При необходимости можно менять позиции */
-    padding-top: 10%;
-    padding-bottom: 10%;
-    transform: translate(-50%, -50%);
-    z-index: 99999999;
-}
 
 .visit {
     width: auto; /* Ширина кнопки: 80% от ширины контейнера */
@@ -1929,7 +1911,22 @@ display: flex;
   box-shadow: none;
 }
 
-
+.reveal .slides {
+  position: absolute;
+  width: 100% !important;
+  height: 100% !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 1;
+  text-align: center;
+  perspective: 600px;
+  perspective-origin: 50% 40%;
+}
 
 @media (hover: none) and (pointer: coarse) {
   *:focus,
