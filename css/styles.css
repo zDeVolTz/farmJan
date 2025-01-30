@@ -1579,9 +1579,11 @@ display: flex;
 
 
 .image-group img {
-    margin: 0;
-    height: 100%;
-    width: 100%;
+  position: absolute;
+  left: -700%;
+  margin: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .text-image {
