@@ -271,33 +271,7 @@ function applyStyles() {
         window.innerWidth >= 1315 && window.innerWidth <= 1320 &&
         window.innerHeight >= 650 && window.innerHeight <= 657;
 
-
-    // Если ширина больше высоты (ориентация landscape)
-    if (window.innerWidth > window.innerHeight) {
-        if (isTablet2304x1440) {
-            document.body.style.transform = "scale(2.8)";
-            document.body.style.inset = "2% 2% auto 0";
-        } else if (isTablet2304x1440_minni) {
-            document.body.style.transform = "scale(2.8)";
-            document.body.style.inset = "2% 2% auto 0";
-        } else if (isTablet2000x1200) {
-            document.body.style.transform = "scale(2.8)";
-            document.body.style.inset = "2% 2% auto 0";
-        }else if (isTablet1315x650) {
-            document.body.style.transform = "scale(2.15)";
-            document.body.style.inset = "2% 2% auto 0";
-        }
-        
-        else {
-            // Сбрасываем стили, если ни одно из условий не выполняется
-            document.body.style.transform = "";
-            document.body.style.inset = "";
-        }
-    } else {
-        // Сбрасываем стили, если ориентация не landscape
-        document.body.style.transform = "";
-        document.body.style.inset = "";
-    }
+    
 }
 
 // Проверяем размеры экрана при загрузке страницы
