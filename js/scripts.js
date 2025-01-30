@@ -284,8 +284,10 @@ function applyStyles() {
             document.body.style.transform = "scale(2.8)";
             document.body.style.inset = "2% 2% auto 0";
         }else if (isTablet1315x650) {
-            document.body.style.transform = "scale(2.8)";
+            document.body.style.transform = "scale(1)";
             document.body.style.inset = "2% 2% auto 0";
+            document.body.style.setProperty('width', '1200px', 'important');
+            document.body.style.setProperty('height', '600px', 'important');
         }
         
         else {
