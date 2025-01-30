@@ -284,7 +284,7 @@ function applyStyles() {
             document.body.style.transform = "scale(2.8)";
             document.body.style.inset = "2% 2% auto 0";
         }else if (isTablet1315x650) {
-            document.body.style.transform = "scale(1)";
+            document.body.style.transform = "scale(2.15)";
             document.body.style.inset = "2% 2% auto 0";
         }
         
