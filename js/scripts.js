@@ -286,23 +286,17 @@ function applyStyles() {
         }else if (isTablet1315x650) {
             document.body.style.transform = "scale(1)";
             document.body.style.inset = "2% 2% auto 0";
-            document.body.style.setProperty('width', '1200px', 'important');
-            document.body.style.setProperty('height', '600px', 'important');
         }
         
         else {
             // Сбрасываем стили, если ни одно из условий не выполняется
             document.body.style.transform = "";
             document.body.style.inset = "";
-            document.body.style.setProperty('width', '1200px', 'important');
-            document.body.style.setProperty('height', '600px', 'important');
         }
     } else {
         // Сбрасываем стили, если ориентация не landscape
         document.body.style.transform = "";
         document.body.style.inset = "";
-        document.body.style.setProperty('width', '1200px', 'important');
-        document.body.style.setProperty('height', '600px', 'important');
     }
 }
 
