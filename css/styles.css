@@ -2014,6 +2014,11 @@ display: flex;
   .text-row p {
     font-size: 30%;
   } 
+
+  .special-content-wrapper {
+    scale: 0.5;
+  }
+
 }
 
 @media (hover: none) and (pointer: coarse) and (orientation: portrait) and (max-height: 600px) {
@@ -2026,15 +2031,6 @@ display: flex;
   } 
 }
 
-@media (hover: none) and (pointer: coarse) and (orientation: portrait) and (max-height: 600px) {
-  .main-block {
-    scale: 0.8;
-  }
-
-  .text-row p {
-    font-size: 20%;
-  } 
-}
 
 @media (max-height: 700px) {
   .main-block {
@@ -2048,11 +2044,19 @@ display: flex;
     font-size: 20%;
   }
 
+  .main-block {
+    scale: 0.8;
+    transform: translate(5%, 0%);
+  }
+  .special-content-wrapper {
+    scale: 0.6;
+  }
+
   .image-group-wrapper {
     position: relative;
     transform: translate(-40px, -10px);
   }
-  
+
   .image-group {
     width: 20px;
     height: 20px;
