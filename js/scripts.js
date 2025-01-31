@@ -30,7 +30,7 @@ function generateSlides(slideSet) {
         const container = document.createElement('div');
         container.className = 'background-container';
         container.setAttribute('data-src', slide.image);
-        container.style.backgroundImage = 'none';
+        container.style.backgroundImage = `url('${slide.image}')`; // Сразу загружаем изображение
 
         // Проверяем соотношение сторон и добавляем класс mobile
         if (window.innerHeight > window.innerWidth) {
@@ -47,19 +47,6 @@ function generateSlides(slideSet) {
         section.appendChild(container);
         return section.outerHTML;
     }).join('');
-}
-
-
-function lazyLoadBackgrounds() {
-    const containers = document.querySelectorAll('.background-container[data-src]');
-    containers.forEach(container => {
-        const isVisible = container.closest('section')?.classList.contains('present');
-        if (isVisible && !container.dataset.loaded) {
-            const src = container.getAttribute('data-src');
-            container.style.backgroundImage = `url('${src}')`;
-            container.setAttribute('data-loaded', 'true');
-        }
-    });
 }
 
 function loadSlides(setName) {
@@ -90,10 +77,6 @@ function loadSlides(setName) {
 
     // Применяем стиль для reveal
     reveal.style.display = 'flex';
-
-    // Ленивый запуск загрузки фонов
-    Reveal.on('slidechanged', lazyLoadBackgrounds);
-    Reveal.on('ready', lazyLoadBackgrounds);
 
     // Синхронизация с Reveal.js
     Reveal.next();
