@@ -992,7 +992,7 @@ export default function( revealElement, options ) {
 					dom.slides.style.top = '';
 					dom.slides.style.bottom = 'auto';
 					dom.slides.style.right = 'auto';
-					transformSlides( { layout: 'translate(-50%, -50%) scale('+ scale +')' } );
+					transformSlides( { layout: 'translate(-50%, 0%) scale('+ scale +')' } );
 				}
 
 				// Select all slides, vertical and horizontal
