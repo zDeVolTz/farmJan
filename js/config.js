@@ -5,8 +5,8 @@ export default {
 
 	// The "normal" size of the presentation, aspect ratio will be preserved
 	// when the presentation is scaled to fit different resolutions
-	width: window.innerWidth * 0.9,  // 90% ширины экрана
-  	height: window.innerHeight * 0.9,  // Пропорционально высоте экрана
+	width: window.innerWidth,  // 90% ширины экрана
+  	height: window.innerHeight,  // Пропорционально высоте экрана
 
 	// Factor of the display size that should remain empty around the content
 	margin: 0.04,
