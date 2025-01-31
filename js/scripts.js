@@ -14,33 +14,41 @@ function generateSlides(slideSet) {
         const animationText = checkSpecAnimation(slide);
         const text = animationText !== null ? animationText : "";
 
-        return `
-            <section
-                data-type="${slide.type || ''}"
-                data-index="${index + 1}"
-                id="slide-${index + 1}"
-                class="slide-container"
-                style="
-                    display: flex !important;
-                    width: 100%;
-                    height: 100%;
-                    justify-content: center;
-                    align-items: center;
-                ">
-                <div class="background-container"
-                    data-src="${slide.image}" 
-                    style="
-                        background-image: none;
-                    ">
-                    <button class="invisible-button" onclick="Reveal.slide(0);"></button>
-                    <button class="invisible-left-button" onclick="Reveal.prev();"></button>
-                    <button class="invisible-right-button" onclick="Reveal.next();"></button>
-                    ${text}
-                </div>
-            </section>
+        const section = document.createElement('section');
+        section.setAttribute('data-type', slide.type || '');
+        section.setAttribute('data-index', index + 1);
+        section.id = `slide-${index + 1}`;
+        section.className = 'slide-container';
+        section.style.cssText = `
+            display: flex !important;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
         `;
+
+        const container = document.createElement('div');
+        container.className = 'background-container';
+        container.setAttribute('data-src', slide.image);
+        container.style.backgroundImage = 'none';
+
+        // Проверяем соотношение сторон и добавляем класс mobile
+        if (window.innerHeight > window.innerWidth) {
+            container.classList.add('mobile');
+        }
+
+        container.innerHTML = `
+            <button class="invisible-button" onclick="Reveal.slide(0);"></button>
+            <button class="invisible-left-button" onclick="Reveal.prev();"></button>
+            <button class="invisible-right-button" onclick="Reveal.next();"></button>
+            ${text}
+        `;
+
+        section.appendChild(container);
+        return section.outerHTML;
     }).join('');
 }
+
 
 function lazyLoadBackgrounds() {
     const containers = document.querySelectorAll('.background-container[data-src]');
@@ -252,25 +260,6 @@ Reveal.on('slidechanged', (event) => {
 // Функция для проверки размеров экрана и применения стилей
 
 function applyStyles() {
-    // Проверяем диапазон для разрешения 2304x1440
-    const isTablet2304x1440 =
-        window.innerWidth >= 2100 && window.innerWidth <= 2510 &&
-        window.innerHeight >= 935 && window.innerHeight <= 1445;
-
-    // Проверяем диапазон для разрешения 2304x1440 (мини)
-    const isTablet2304x1440_minni =
-        window.innerWidth >= 1100 && window.innerWidth <= 1500 &&
-        window.innerHeight >= 400 && window.innerHeight <= 800;
-
-    // Проверяем диапазон для разрешения 2000x1200
-    const isTablet2000x1200 =
-        window.innerWidth >= 1995 && window.innerWidth <= 2005 &&
-        window.innerHeight >= 1195 && window.innerHeight <= 1205;
-
-    const isTablet1315x650 =
-        window.innerWidth >= 1315 && window.innerWidth <= 1320 &&
-        window.innerHeight >= 650 && window.innerHeight <= 657;
-
     // Соотношение сторон, например 16:9
     const aspectRatio = 16 / 9;
 
@@ -296,8 +285,78 @@ function applyStyles() {
     }
 }
 
+function checkAspectRatio() {
+    const containers = document.querySelectorAll('.background-container'); // Находим все элементы с классом background-container
+    if (!containers.length) return;
+
+    containers.forEach(container => {
+        if (window.innerHeight > window.innerWidth) {
+            container.classList.add('mobile');
+        } else {
+            container.classList.remove('mobile');
+        }
+    });
+}
+
+// Запускаем проверку при загрузке страницы и изменении размеров окна
+window.addEventListener('load', checkAspectRatio);
+window.addEventListener('resize', checkAspectRatio);
+
 // Проверяем размеры экрана при загрузке страницы
 applyStyles();
 
 // Обрабатываем изменение размеров окна
 window.addEventListener('resize', applyStyles);
+
+function adjustScale() {
+    const wrapper = document.querySelector('.special-content-wrapper');
+    const topElement = document.querySelector('.image-f.img-1');
+    if (!wrapper) return;  // Если элемент еще не появился, выходим из функции
+    
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+
+    // Базовый масштаб 2 и минимальная ширина для скейла 1
+    const minWidth = 1000;
+    const maxWidth = 1920;  // Максимальная ширина, при которой скейл будет равен 2
+
+    // Если высота экрана больше ширины, применяем другие значения
+    let scale, topPercent;
+
+    if (screenHeight > screenWidth) {
+        // Для портретной ориентации (когда высота больше ширины)
+        scale = 1 + ((2 - 1) * (screenHeight - minWidth) / (maxWidth - minWidth)); // Меняется масштаб в зависимости от высоты
+        scale = Math.max(0.7, Math.min(0.5, scale));  // Ограничиваем масштаб от 1 до 2
+
+        topPercent = 10 + ((40 - 10) * (screenHeight - minWidth) / (maxWidth - minWidth));  // Меняется top для вертикального экрана
+        topPercent = Math.max(2, Math.min(11, topPercent));  // Ограничиваем top от 10% до 40%
+    } else {
+        // Для ландшафтной ориентации (когда ширина больше высоты)
+        // Вычисляем масштаб в зависимости от ширины экрана
+        scale = 2 - ((2 - 1) * (maxWidth - screenWidth) / (maxWidth - minWidth));
+        scale = Math.max(1, Math.min(2, scale));  // Ограничиваем масштаб от 1 до 2
+
+        topPercent = 30 - ((30 - 20) * (maxWidth - screenWidth) / (maxWidth - minWidth));
+        topPercent = Math.max(20, Math.min(30, topPercent));  // Ограничиваем top от 20% до 30%
+    }
+  
+    // Применяем новый масштаб
+    wrapper.style.transform = `scale(${scale})`;
+  
+    // Применяем новый top
+    topElement.style.top = `${topPercent}%`;
+}
+  
+  // Добавляем слушатель события для изменения размера окна
+  window.addEventListener('resize', adjustScale);
+  
+  // Используем MutationObserver, чтобы отслеживать добавление элемента на страницу
+  const observer2 = new MutationObserver(() => {
+    const wrapper = document.querySelector('.special-content-wrapper');
+    if (wrapper) {
+      adjustScale();  // Если элемент найден, сразу применяем масштаб
+    }
+  });
+  
+  // Настроим наблюдатель на изменения в DOM
+  observer2.observe(document.body, { childList: true, subtree: true });

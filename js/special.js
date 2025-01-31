@@ -254,18 +254,20 @@ const numbers = `
             <!-- Колонка с изображениями -->
             <div class="column-texts">
                 <div class="text-row">
-                    <div class="image-group">
-                        <img src="slides/Enterol2560/E2/1.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/2.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/3.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/4.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/5.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/6.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/7.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/8.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/9.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/10.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/11.png" class="text-image">
+                    <div class="image-group-wrapper">
+                        <div class="image-group">
+                            <img src="slides/Enterol2560/E2/1.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/2.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/3.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/4.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/5.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/6.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/7.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/8.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/9.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/10.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/11.png" class="text-image">
+                        </div>
                     </div>
                     <p class="text" onclick="
                         const textElement = this;
@@ -316,19 +318,22 @@ const numbers = `
                     ">Дисбіоз, пов’язаний с застосуванням АБТ</p>
                 </div>
                 <div class="text-row">
-                    <div class="image-group ">
-                        <img src="slides/Enterol2560/E2/1.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/2.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/3.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/4.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/5.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/6.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/7.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/8.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/9.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/10.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/11.png" class="text-image">
+                    <div class="image-group-wrapper">
+                        <div class="image-group">
+                            <img src="slides/Enterol2560/E2/1.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/2.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/3.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/4.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/5.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/6.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/7.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/8.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/9.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/10.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/11.png" class="text-image">
+                        </div>
                     </div>
+
                     <p class="text" onclick="
                         const textElement = this;
                         const imageGroup = this.previousElementSibling;
@@ -378,18 +383,20 @@ const numbers = `
                     ">Синдром подразненного кішківника</p>
                 </div>
                 <div class="text-row">
-                    <div class="image-group ">
-                        <img src="slides/Enterol2560/E2/1.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/2.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/3.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/4.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/5.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/6.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/7.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/8.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/9.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/10.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/11.png" class="text-image">
+                    <div class="image-group-wrapper">
+                        <div class="image-group">
+                            <img src="slides/Enterol2560/E2/1.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/2.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/3.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/4.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/5.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/6.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/7.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/8.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/9.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/10.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/11.png" class="text-image">
+                        </div>
                     </div>
                     <p class="text" onclick="
                         const textElement = this;
@@ -440,18 +447,20 @@ const numbers = `
                     ">Запальні захворювання кішківника</p>
                 </div>
                 <div class="text-row">
-                    <div class="image-group ">
-                        <img src="slides/Enterol2560/E2/1.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/2.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/3.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/4.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/5.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/6.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/7.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/8.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/9.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/10.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/11.png" class="text-image">
+                    <div class="image-group-wrapper">
+                        <div class="image-group">
+                            <img src="slides/Enterol2560/E2/1.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/2.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/3.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/4.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/5.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/6.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/7.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/8.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/9.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/10.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/11.png" class="text-image">
+                        </div>
                     </div>
                     <p class="text" onclick="
                         const textElement = this;
@@ -502,18 +511,20 @@ const numbers = `
                     ">Захворювання шкіри</p>
                 </div>
                 <div class="text-row">
-                    <div class="image-group ">
-                        <img src="slides/Enterol2560/E2/1.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/2.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/3.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/4.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/5.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/6.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/7.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/8.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/9.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/10.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/11.png" class="text-image">
+                    <div class="image-group-wrapper">
+                        <div class="image-group">
+                            <img src="slides/Enterol2560/E2/1.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/2.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/3.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/4.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/5.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/6.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/7.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/8.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/9.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/10.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/11.png" class="text-image">
+                        </div>
                     </div>
                     <p class="text" onclick="
                         const textElement = this;
@@ -564,18 +575,20 @@ const numbers = `
                     ">Діарея (дисбіоз) будь-якого генезу</p>
                 </div>
                 <div class="text-row">
-                    <div class="image-group ">
-                        <img src="slides/Enterol2560/E2/1.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/2.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/3.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/4.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/5.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/6.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/7.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/8.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/9.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/10.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/11.png" class="text-image">
+                    <div class="image-group-wrapper">
+                        <div class="image-group">
+                            <img src="slides/Enterol2560/E2/1.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/2.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/3.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/4.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/5.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/6.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/7.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/8.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/9.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/10.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/11.png" class="text-image">
+                        </div>
                     </div>
                     <p class="text" onclick="
                         const textElement = this;
@@ -626,18 +639,20 @@ const numbers = `
                     ">Призначення ІПП</p>
                 </div>
                 <div class="text-row">
-                    <div class="image-group ">
-                        <img src="slides/Enterol2560/E2/1.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/2.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/3.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/4.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/5.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/6.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/7.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/8.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/9.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/10.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/11.png" class="text-image">
+                    <div class="image-group-wrapper">
+                        <div class="image-group">
+                            <img src="slides/Enterol2560/E2/1.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/2.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/3.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/4.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/5.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/6.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/7.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/8.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/9.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/10.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/11.png" class="text-image">
+                        </div>
                     </div>
                     <p class="text" onclick="
                         const textElement = this;
@@ -688,18 +703,20 @@ const numbers = `
                     ">Метаболічні порушенні (ожиріння)</p>
                 </div>
                 <div class="text-row">
-                    <div class="image-group ">
-                        <img src="slides/Enterol2560/E2/1.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/2.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/3.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/4.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/5.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/6.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/7.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/8.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/9.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/10.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/11.png" class="text-image">
+                    <div class="image-group-wrapper">
+                        <div class="image-group">
+                            <img src="slides/Enterol2560/E2/1.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/2.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/3.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/4.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/5.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/6.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/7.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/8.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/9.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/10.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/11.png" class="text-image">
+                        </div>
                     </div>
                     <p class="text" onclick="
                         const textElement = this;
@@ -750,18 +767,20 @@ const numbers = `
                     ">Використання АТБ при урологічних захворюваннях</p>
                 </div>
                 <div class="text-row">
-                    <div class="image-group ">
-                        <img src="slides/Enterol2560/E2/1.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/2.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/3.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/4.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/5.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/6.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/7.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/8.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/9.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/10.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/11.png" class="text-image">
+                    <div class="image-group-wrapper">
+                        <div class="image-group">
+                            <img src="slides/Enterol2560/E2/1.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/2.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/3.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/4.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/5.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/6.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/7.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/8.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/9.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/10.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/11.png" class="text-image">
+                        </div>
                     </div>
                     <p class="text" onclick="
                         const textElement = this;
@@ -812,18 +831,20 @@ const numbers = `
                     ">Метаболічно асоційована стеатотична хвороба печінки</p>
                 </div>
                 <div class="text-row">
-                    <div class="image-group ">
-                        <img src="slides/Enterol2560/E2/1.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/2.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/3.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/4.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/5.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/6.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/7.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/8.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/9.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/10.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/11.png" class="text-image">
+                    <div class="image-group-wrapper">
+                        <div class="image-group">
+                            <img src="slides/Enterol2560/E2/1.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/2.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/3.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/4.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/5.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/6.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/7.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/8.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/9.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/10.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/11.png" class="text-image">
+                        </div>
                     </div>
                     <p class="text" onclick="
                         const textElement = this;
@@ -874,18 +895,20 @@ const numbers = `
                     ">Хелікобактер пілорі інфекція</p>
                 </div>
                 <div class="text-row">
-                    <div class="image-group ">
-                        <img src="slides/Enterol2560/E2/1.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/2.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/3.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/4.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/5.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/6.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/7.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/8.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/9.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/10.png" class="text-image">
-                        <img src="slides/Enterol2560/E2/11.png" class="text-image">
+                    <div class="image-group-wrapper">
+                        <div class="image-group">
+                            <img src="slides/Enterol2560/E2/1.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/2.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/3.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/4.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/5.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/6.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/7.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/8.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/9.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/10.png" class="text-image">
+                            <img src="slides/Enterol2560/E2/11.png" class="text-image">
+                        </div>
                     </div>
                     <p class="text" onclick="
                         const textElement = this;

@@ -2,12 +2,11 @@ let temp_id = 1;
 let lastTempSlide = null;
 
 function generateTemporarySlide(slideData) {
-
     const animationText = checkSpecAnimation(slideData);
     const text = animationText !== null ? animationText : "";
 
     const section = document.createElement('section');
-    section.id = slideData.type + "-temp-" + temp_id
+    section.id = slideData.type + "-temp-" + temp_id;
     temp_id = temp_id + 1;
     section.setAttribute('data-type', slideData.type || '');
     section.setAttribute('class', 'temp-slide');
@@ -24,6 +23,12 @@ function generateTemporarySlide(slideData) {
     container.style = `
         background-image: url('${slideData.image}');
     `;
+    
+    // Проверяем соотношение сторон и добавляем класс mobile
+    if (window.innerHeight > window.innerWidth) {
+        container.classList.add('mobile');
+    }
+
     container.innerHTML = `
         <button class="invisible-button" onclick="Reveal.slide(0);"></button>
         <button class="invisible-left-button" onclick="Reveal.prev();"></button>

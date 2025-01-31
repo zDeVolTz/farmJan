@@ -18,96 +18,97 @@ const checkAndAddSvg = () => {
     const anim = `
       <div class="special-content">
           <img src="slides/Анимация/Кишечник.png" alt="фон" class="overlay-image">
-          <img src="slides/Анимация/text1.png" alt="текст" class="text-1">
-          <img src="slides/Анимация/text2.png" alt="текст" class="text-2">
-          <img src="slides/Анимация/text3.png" alt="текст" class="text-3">
-          <img src="slides/Анимация/arr1.png" alt="Стрелка" class="arr-1">
+          <div class="special-content-wrapper">
+            <img src="slides/Анимация/text1.png" alt="текст" class="text-1">
+            <img src="slides/Анимация/text2.png" alt="текст" class="text-2">
+            <img src="slides/Анимация/text3.png" alt="текст" class="text-3">
+            <img src="slides/Анимация/arr1.png" alt="Стрелка" class="arr-1">
 
-          <div class="image-stack">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 37.png" alt="Наложение 1" class="stacked-image img-1" loading="lazy">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 38.png" alt="Наложение 1" class="stacked-image img-3" loading="lazy">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 39.png" alt="Наложение 1" class="stacked-image img-4" loading="lazy">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 40.png" alt="Наложение 1" class="stacked-image img-5" loading="lazy">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 41.png" alt="Наложение 1" class="stacked-image img-6" loading="lazy">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 42.png" alt="Наложение 1" class="stacked-image img-7" loading="lazy">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 43.png" alt="Наложение 1" class="stacked-image img-8" loading="lazy">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 44.png" alt="Наложение 1" class="stacked-image img-9" loading="lazy">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 36.png" alt="Наложение 1" class="stacked-image img-10" loading="lazy">
-          </div>
-
-          <div class="image-stack2">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 34.png" alt="Наложение 1" class="stacked-image2 img-1" loading="lazy">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 35.png" alt="Наложение 1" class="stacked-image2 img-2" loading="lazy">
-          </div>
-
-          <div class="image-stack3">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 33.png" alt="Наложение 1" class="stacked-image3 img-1" loading="lazy">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 32.png" alt="Наложение 1" class="stacked-image3 img-2" loading="lazy">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 31.png" alt="Наложение 1" class="stacked-image3 img-3" loading="lazy">
-          </div>
-
-          <div class="image-stack4">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 25.png" alt="Наложение 1" class="stacked-image4 img-1" loading="lazy">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 26.png" alt="Наложение 1" class="stacked-image4 img-2" loading="lazy">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 27.png" alt="Наложение 1" class="stacked-image4 img-3" loading="lazy">
-          </div>
-
-          <div class="image-stack5">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 29.png" alt="Наложение 1" class="stacked-image5 img-1" loading="lazy">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 28.png" alt="Наложение 1" class="stacked-image5 img-2" loading="lazy">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 30.png" alt="Наложение 1" class="stacked-image5 img-3" loading="lazy">
-          </div>
-
-          <div class="image-stack1-r">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Зеленые бактерии/Group 29.png" alt="Наложение 1" class="stacked-image1-r img-1">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Зеленые бактерии/Group 30.png" alt="Наложение 1" class="stacked-image1-r img-2">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Зеленые бактерии/Group 31.png" alt="Наложение 1" class="stacked-image1-r img-3">
-          </div>
-
-          <div class="image-stack2-r">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Зеленые бактерии/Shape 10.png" alt="Наложение 1" class="stacked-image2-r img-1">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Зеленые бактерии/Shape 11.png" alt="Наложение 1" class="stacked-image2-r img-2">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Зеленые бактерии/Shape 12.png" alt="Наложение 1" class="stacked-image2-r img-3">
-          </div>
-
-          <div class="image-stack3-r">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Зеленые бактерии/Shape 13.png" alt="Наложение 1" class="stacked-image3-r img-1">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Зеленые бактерии/Shape 14.png" alt="Наложение 1" class="stacked-image3-r img-2">
-            <img src="slides/Enterol2560/E19/Новая папка (2)/Зеленые бактерии/Shape 15.png" alt="Наложение 1" class="stacked-image3-r img-3">
-          </div>
-
-          <div class="image-f img-1">
-        
-              <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Mask group 4.png" alt="Наложение 1" class="image-f img-2">
-
-             <div class="image-stack1-l">
-              <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Group 7.png" alt="Наложение 1" class="stacked-image1-l img-1">
-              <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Group 5.png" alt="Наложение 1" class="stacked-image1-l img-2">
-              <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Group 8.png" alt="Наложение 1" class="stacked-image1-l img-3">
-              <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Group 4.png" alt="Наложение 1" class="stacked-image1-l img-4">
-              <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Group 6.png" alt="Наложение 1" class="stacked-image1-l img-5">
-            
+            <div class="image-stack">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 37.png" alt="Наложение 1" class="stacked-image img-1" loading="lazy">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 38.png" alt="Наложение 1" class="stacked-image img-3" loading="lazy">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 39.png" alt="Наложение 1" class="stacked-image img-4" loading="lazy">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 40.png" alt="Наложение 1" class="stacked-image img-5" loading="lazy">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 41.png" alt="Наложение 1" class="stacked-image img-6" loading="lazy">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 42.png" alt="Наложение 1" class="stacked-image img-7" loading="lazy">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 43.png" alt="Наложение 1" class="stacked-image img-8" loading="lazy">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 44.png" alt="Наложение 1" class="stacked-image img-9" loading="lazy">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 36.png" alt="Наложение 1" class="stacked-image img-10" loading="lazy">
             </div>
 
-            <div class="image-stack2-l">
-              <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Shape 6.png" alt="Наложение 1" class="stacked-image2-l img-1">
-              <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Shape 7.png" alt="Наложение 1" class="stacked-image2-l img-2">
-              <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Shape 8.png" alt="Наложение 1" class="stacked-image2-l img-3">
-              <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Shape 9.png" alt="Наложение 1" class="stacked-image2-l img-4">
-              <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Shape 10.png" alt="Наложение 1" class="stacked-image2-l img-5">
-              <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Shape 11.png" alt="Наложение 1" class="stacked-image2-l img-6">
-              <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Shape 12.png" alt="Наложение 1" class="stacked-image2-l img-7">
+            <div class="image-stack2">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 34.png" alt="Наложение 1" class="stacked-image2 img-1" loading="lazy">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 35.png" alt="Наложение 1" class="stacked-image2 img-2" loading="lazy">
             </div>
 
-            <div class="image-stack3-l">
-              <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Shape 2.png" alt="Наложение 1" class="stacked-image3-l img-1">
-              <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Shape 3.png" alt="Наложение 1" class="stacked-image3-l img-2">
-              <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Shape 4.png" alt="Наложение 1" class="stacked-image3-l img-3">
-              <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Shape 5.png" alt="Наложение 1" class="stacked-image3-l img-4">
+            <div class="image-stack3">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 33.png" alt="Наложение 1" class="stacked-image3 img-1" loading="lazy">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 32.png" alt="Наложение 1" class="stacked-image3 img-2" loading="lazy">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 31.png" alt="Наложение 1" class="stacked-image3 img-3" loading="lazy">
             </div>
 
+            <div class="image-stack4">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 25.png" alt="Наложение 1" class="stacked-image4 img-1" loading="lazy">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 26.png" alt="Наложение 1" class="stacked-image4 img-2" loading="lazy">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 27.png" alt="Наложение 1" class="stacked-image4 img-3" loading="lazy">
+            </div>
+
+            <div class="image-stack5">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 29.png" alt="Наложение 1" class="stacked-image5 img-1" loading="lazy">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 28.png" alt="Наложение 1" class="stacked-image5 img-2" loading="lazy">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Group 30.png" alt="Наложение 1" class="stacked-image5 img-3" loading="lazy">
+            </div>
+
+            <div class="image-stack1-r">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Зеленые бактерии/Group 29.png" alt="Наложение 1" class="stacked-image1-r img-1">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Зеленые бактерии/Group 30.png" alt="Наложение 1" class="stacked-image1-r img-2">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Зеленые бактерии/Group 31.png" alt="Наложение 1" class="stacked-image1-r img-3">
+            </div>
+
+            <div class="image-stack2-r">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Зеленые бактерии/Shape 10.png" alt="Наложение 1" class="stacked-image2-r img-1">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Зеленые бактерии/Shape 11.png" alt="Наложение 1" class="stacked-image2-r img-2">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Зеленые бактерии/Shape 12.png" alt="Наложение 1" class="stacked-image2-r img-3">
+            </div>
+
+            <div class="image-stack3-r">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Зеленые бактерии/Shape 13.png" alt="Наложение 1" class="stacked-image3-r img-1">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Зеленые бактерии/Shape 14.png" alt="Наложение 1" class="stacked-image3-r img-2">
+              <img src="slides/Enterol2560/E19/Новая папка (2)/Зеленые бактерии/Shape 15.png" alt="Наложение 1" class="stacked-image3-r img-3">
+            </div>
+
+            <div class="image-f img-1">
+          
+                <img src="slides/Enterol2560/E19/Новая папка (2)/Кишечник/Mask group 4.png" alt="Наложение 1" class="image-f img-2">
+
+              <div class="image-stack1-l">
+                <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Group 7.png" alt="Наложение 1" class="stacked-image1-l img-1">
+                <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Group 5.png" alt="Наложение 1" class="stacked-image1-l img-2">
+                <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Group 8.png" alt="Наложение 1" class="stacked-image1-l img-3">
+                <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Group 4.png" alt="Наложение 1" class="stacked-image1-l img-4">
+                <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Group 6.png" alt="Наложение 1" class="stacked-image1-l img-5">
+              
+              </div>
+
+              <div class="image-stack2-l">
+                <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Shape 6.png" alt="Наложение 1" class="stacked-image2-l img-1">
+                <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Shape 7.png" alt="Наложение 1" class="stacked-image2-l img-2">
+                <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Shape 8.png" alt="Наложение 1" class="stacked-image2-l img-3">
+                <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Shape 9.png" alt="Наложение 1" class="stacked-image2-l img-4">
+                <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Shape 10.png" alt="Наложение 1" class="stacked-image2-l img-5">
+                <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Shape 11.png" alt="Наложение 1" class="stacked-image2-l img-6">
+                <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Shape 12.png" alt="Наложение 1" class="stacked-image2-l img-7">
+              </div>
+
+              <div class="image-stack3-l">
+                <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Shape 2.png" alt="Наложение 1" class="stacked-image3-l img-1">
+                <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Shape 3.png" alt="Наложение 1" class="stacked-image3-l img-2">
+                <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Shape 4.png" alt="Наложение 1" class="stacked-image3-l img-3">
+                <img src="slides/Enterol2560/E19/Новая папка (2)/Синие бактерии/Shape 5.png" alt="Наложение 1" class="stacked-image3-l img-4">
+              </div>
+
+            </div>
           </div>
-
         </div>
     `;
 
