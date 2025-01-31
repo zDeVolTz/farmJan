@@ -1987,3 +1987,58 @@ display: flex;
     max-height: 50%;
   }
 }
+
+@media (hover: none) and (pointer: coarse) and (orientation: portrait) and (max-height: 1400px) {
+  .main-block {
+    scale: 0.7;
+    top: 25%;
+    transform: translate(0%, 0%);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) and (orientation: portrait) and (max-height: 940px) {
+  .main-block {
+    scale: 0.65;
+    transform: translate(-20%, 0%);
+  }
+  .image-group-wrapper {
+    position: relative;
+    transform: translate(-40px, -10px);
+  }
+
+  .image-group {
+    width: 20px;
+    height: 20px;
+  }
+
+  .text-row p {
+    font-size: 30%;
+  } 
+}
+
+@media (hover: none) and (pointer: coarse) and (orientation: portrait) and (max-height: 600px) {
+  .main-block {
+    scale: 0.8;
+  }
+
+  .text-row p {
+    font-size: 20%;
+  } 
+}
+
+@media (hover: none) and (pointer: coarse) and (orientation: portrait) and (max-height: 600px) {
+  .main-block {
+    scale: 0.8;
+  }
+
+  .text-row p {
+    font-size: 20%;
+  } 
+}
+
+@media (max-height: 700px) {
+  .main-block {
+    scale: 0.8;
+    transform: translate(-5%, 0%);
+  }
+}
