@@ -2042,3 +2042,19 @@ display: flex;
     transform: translate(-5%, 0%);
   }
 }
+
+@media (max-height: 500px) {
+  .text-row p {
+    font-size: 20%;
+  }
+
+  .image-group-wrapper {
+    position: relative;
+    transform: translate(-40px, -10px);
+  }
+  
+  .image-group {
+    width: 20px;
+    height: 20px;
+  } 
+}
