@@ -1966,3 +1966,24 @@ display: flex;
     -webkit-tap-highlight-color: transparent; /* Убирает серую/синюю подсветку */
   }
 }
+
+@media (max-width: 550px) and (orientation: portrait) {
+  .main-container h1 {
+     font-size: 20px;
+  }
+  .main-container p {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-height: 540px) and (orientation: landscape) {
+  .main-container h1 {
+     font-size: 20px;
+  }
+  .main-container p {
+    margin-bottom: 15px;
+  }
+  .main-button-grid {
+    max-height: 50%;
+  }
+}
