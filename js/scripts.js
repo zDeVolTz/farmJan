@@ -360,3 +360,13 @@ function adjustScale() {
   
   // Настроим наблюдатель на изменения в DOM
   observer2.observe(document.body, { childList: true, subtree: true });
+
+  if ('caches' in window) {
+    caches.keys().then(function(names) {
+      for (let name of names) {
+        caches.delete(name);
+      }
+    }).then(() => {
+      location.reload(true); // Перезагружает страницу после очистки кеша
+    });
+  }
