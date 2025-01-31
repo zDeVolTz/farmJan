@@ -2048,8 +2048,13 @@ display: flex;
     scale: 0.8;
     transform: translate(5%, 0%);
   }
+
   .special-content-wrapper {
-    scale: 0.6;
+    scale: 0.7;
+  }
+
+  .overlay-image {
+    max-width: 80% !important;
   }
 
   .image-group-wrapper {
