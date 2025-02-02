@@ -335,26 +335,28 @@ section {
 }
 
 #image1 {
+    margin: 0;
     position: absolute;
-    width: 115%;
+    width: 100%;
     height: auto;
-    top: 6%;
-    aspect-ratio: 1450 / 175;
+    top: 0%;
+    height: 20% !important;
     transition: opacity 0.5s ease;
 }
 #image1-new {
+    margin: 0;
     position: absolute;
-    width: 115%;
+    width: 100%;
     height: auto;
-    top: 7%;
-    aspect-ratio: 1450 / 175;
+    top: 0%;
+    height: 20% !important;
     transition: opacity 0.5s ease;
 }
 
 #image2 {
     position: absolute;
     width: 20%;
-    height: auto;
+    height: 40%;
     top: 37%;
     left: 75%;
     transition: opacity 0.5s ease;
