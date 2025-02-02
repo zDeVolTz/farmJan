@@ -2059,7 +2059,15 @@ display: flex;
 @media (max-height: 700px) {
   .main-block {
       scale: 1;
-      transform: translate(50%, -5%);
+      transform: translate(40%, -5%);
+  }
+  .image-group {
+      width: 30px;
+      height: 30px;
+  }
+  .image-group img {
+      left: 60%;
+      top: 20%;
   }
 }
 
