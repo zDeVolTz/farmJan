@@ -2069,6 +2069,97 @@ display: flex;
       left: 60%;
       top: 20%;
   }
+
+  #circle-btn-24 {
+    height: 15%;
+    position: absolute;
+    top: 72%;
+    left: 42%;
+}
+
+  #circle-btn-25 {
+    position: absolute;
+    top: 60%;
+    left: 15%;
+  }
+
+  #circle-btn-26 {
+    position: absolute;
+    top: 41%;
+    left: 8%;
+}
+
+  #circle-btn-27 {
+    height: 11%;
+    position: absolute;
+    top: 22%;
+    left: 11%;
+  }
+
+  #circle-btn-5 {
+    height: 10%;
+    position: absolute;
+    top: 60%;
+    left: 8%;
+  }
+
+  #circle-btn-6 {
+    position: absolute;
+    top: 46%;
+    left: 8%;
+  }
+
+  #circle-btn-7 {
+    position: absolute;
+    top: 29%;
+    left: 10%;
+  }
+
+  #circle-btn-8 {
+    position: absolute;
+    top: 15%;
+    left: 13%;
+}
+
+  .stresam-buttons-container {
+    top: 50%;
+  }
+  .stresam-buttons {
+    width: 90%;
+  }
+  .stresam-buttons-container-c14 {
+    top: 50%;
+  }
+  .stresam-buttons-c14 {
+    width: 90%;
+  }
+
+  .visit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 1.5% 0% 0% 33%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding-bottom: 4%;
+    transform: translate(-50%, -50%);
+    z-index: 99999999;
+}
+
+  .visit {
+    width: 45%;
+  }
+
+  .human-container {
+    transform: translate(-50%, 0) scale(1.4, 1.3);
+  }
+
 }
 
 @media (max-height: 500px) {
