@@ -2058,8 +2058,8 @@ display: flex;
 
 @media (max-height: 700px) {
   .main-block {
-    scale: 0.8;
-    transform: translate(50%,-10%);
+      scale: 1;
+      transform: translate(50%, -5%);
   }
 }
 
