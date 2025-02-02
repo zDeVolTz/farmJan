@@ -147,7 +147,7 @@ const e_42 = `
             { type: 'EnterolV3', image: 'slides/Enterol v3/Е (53).png' },
             { type: 'EnterolV3', image: 'slides/Enterol v3/Е (54).png' },
             { type: 'EnterolV3', image: 'slides/Enterol v3/Е (55).png' }
-        ];addTemporarySlides(slides6);" />
+        ];addTemporarySlides(slides6); checkAspectRatio();" />
     <img src="slides/Enterol v3/Е42/Group 87.png" class="circle-buttons" id="circle-btn-7" onclick="addTemporarySlide({image: 'slides/Enterol v3/Е (44).png', type: 'EnterolV3'});" />
     <img src="slides/Enterol v3/Е42/Group 88.png" class="circle-buttons" id="circle-btn-8" onclick="addTemporarySlide({image: 'slides/Enterol v3/Е (43).png', type: 'EnterolV3'});" />
 </div>
@@ -159,23 +159,23 @@ const e_30 = `
              onclick="const slidesBtn21 = [
                 { type: 'EnterolV3', image: 'slides/Enterol v3/Е (31).png' },
                 { type: 'EnterolV3', image: 'slides/Enterol v3/Е (32).png' }
-            ];addTemporarySlides(slidesBtn21);" />
+            ];addTemporarySlides(slidesBtn21); checkAspectRatio();" />
         <img src="slides/Enterol v3/Е30/Group 75.png" class="circle-buttons2" id="circle-btn-22"
              onclick="const slidesBtn22 = [
                 { type: 'EnterolV3', image: 'slides/Enterol v3/Е (33).png' },
                 { type: 'EnterolV3', image: 'slides/Enterol v3/Е (34).png' }
-            ];addTemporarySlides(slidesBtn22);" />
+            ];addTemporarySlides(slidesBtn22); checkAspectRatio();" />
         <img src="slides/Enterol v3/Е30/Group 76.png" class="circle-buttons2" id="circle-btn-23"
              onclick="const slidesBtn23 = [
                 { type: 'EnterolV3', image: 'slides/Enterol v3/Е (35).png' },
                 { type: 'EnterolV3', image: 'slides/Enterol v3/Е (36).png' }
-            ];addTemporarySlides(slidesBtn23);" />
+            ];addTemporarySlides(slidesBtn23); checkAspectRatio();" />
         <img src="slides/Enterol v3/Е30/Group 77.png" class="circle-buttons2" id="circle-btn-24" onclick="addTemporarySlide({image: 'slides/Enterol v3/Е (41).png', type: 'EnterolV3'});" />
         <img src="slides/Enterol v3/Е30/Group 78.png" class="circle-buttons2" id="circle-btn-25"
              onclick="const slidesBtn25 = [
                 { type: 'EnterolV3', image: 'slides/Enterol v3/Е (37).png' },
                 { type: 'EnterolV3', image: 'slides/Enterol v3/Е (38).png' }
-            ];addTemporarySlides(slidesBtn25);" />
+            ];addTemporarySlides(slidesBtn25); checkAspectRatio();" />
         <img src="slides/Enterol v3/Е30/Group 79.png" class="circle-buttons2" id="circle-btn-26" onclick="addTemporarySlide({image: 'slides/Enterol v3/Е (39).png', type: 'EnterolV3'});" />
         <img src="slides/Enterol v3/Е30/Group 80.png" class="circle-buttons" id="circle-btn-27" onclick="addTemporarySlide({image: 'slides/Enterol v3/Е (40).png', type: 'EnterolV3'});" />
     </div>

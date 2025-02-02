@@ -288,6 +288,9 @@ window.addEventListener('resize', checkAspectRatio);
 // Проверяем размеры экрана при загрузке страницы
 applyStyles();
 
+
+
+
 // Обрабатываем изменение размеров окна
 window.addEventListener('resize', applyStyles);
 

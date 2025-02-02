@@ -9,11 +9,12 @@
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css">
-		<link rel="stylesheet" href="css/styles.css?v=11118">
+		<link rel="stylesheet" href="css/styles.css?v=11119">
 
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
 	</head>
 	<body>
+		<div id="device-size" class="device-size"></div>
         <div class="reveal">
             <div class="slides" id="slides-container">
 				<section id="slide-0" data-background-color="#1b2683">
@@ -87,5 +88,22 @@
 
 		</script>
 
+		<script>
+			function updateDeviceSize() {
+				const width = window.innerWidth;
+				const height = window.innerHeight;
+				const sizeText = `Width: ${width}px, Height: ${height}px`;
+
+				// Обновляем текст в верхнем блоке
+				document.getElementById('device-size').textContent = sizeText;
+			}
+
+			// Обновляем размер при загрузке страницы и при изменении размера окна
+			window.addEventListener('resize', updateDeviceSize);
+			window.addEventListener('load', updateDeviceSize);
+
+			// Инициализируем сразу
+			updateDeviceSize();
+		</script>
 	</body>
 </html>
