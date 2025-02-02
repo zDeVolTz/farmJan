@@ -1003,17 +1003,17 @@ const a_2 = `
         <source src="slides/Asacol/A2/asacol.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-
-    <div class="bottom-corner" style="position: absolute; top: 66.6%; left: -3%; width: 20%; height: 20%; z-index: 999;">
-        <img src="slides/Asacol/A2/bottom-corner.png" />
-    </div>
-    <div class="top-corner" style="position: absolute; top: 19.9%; right: -3%; width: 20%; height: 20%; z-index: 999;">
-        <img src="slides/Asacol/A2/top-corner.png" />
-    </div>
-    <div class="video-title" style="position: absolute; top: 11%; right: 0; width: 106%; height: fit-content; aspect-ratio: 1363 / 118; z-index: 999; margin: 0; left: -2.7%;">
-        <img src="slides/Asacol/A2/title.png" style="margin: 0;"/>
-    </div>
 `
+    // <div class="bottom-corner" style="position: absolute; top: 66.6%; left: -3%; width: 20%; height: 20%; z-index: 999;">
+    //     <img src="slides/Asacol/A2/bottom-corner.png" />
+    // </div>
+    // <div class="top-corner" style="position: absolute; top: 19.9%; right: -3%; width: 20%; height: 20%; z-index: 999;">
+    //     <img src="slides/Asacol/A2/top-corner.png" />
+    // </div>
+    // <div class="video-title" style="position: absolute; top: 11%; right: 0; width: 106%; height: fit-content; aspect-ratio: 1363 / 118; z-index: 999; margin: 0; left: -2.7%;">
+    //     <img src="slides/Asacol/A2/title.png" style="margin: 0;"/>
+    // </div>
+
 
 const e_20 = `
 <div id="e20-container" style="position: absolute; opacity: 0; width: 100%; height: 100%; z-index: 500;" onclick="document.getElementById('e20-container').style.opacity = '1';">

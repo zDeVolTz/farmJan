@@ -2095,3 +2095,9 @@ display: flex;
   width: 20%;
   background-color: aliceblue;
 }
+
+#hidden-video {
+  top: 57% !important;
+  width: 80% !important;
+  height: 70% !important;
+}
