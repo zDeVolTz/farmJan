@@ -2149,7 +2149,7 @@ display: flex;
     left: 50%;
     padding-bottom: 4%;
     transform: translate(-50%, -50%);
-    z-index: 99999999;
+    z-index: 999;
 }
 
   .visit {

@@ -1,4 +1,6 @@
 
+let dataIndexAsacol = 0;
+
 
 function checkSpecAnimation(slide) {
     if (slide.special_animation === 'Special') {
@@ -78,12 +80,30 @@ function loadSlides(setName) {
     // Применяем стиль для reveal
     reveal.style.display = 'flex';
 
+    getDataIndexForAsacolSlide();
     // Синхронизация с Reveal.js
     Reveal.next();
     Reveal.sync(); // Синхронизация
     Reveal.layout();
     Reveal.slide(1); // Переход на первый слайд
 }
+
+
+function getDataIndexForAsacolSlide() {
+    // Найдем все секции
+    const slides = document.querySelectorAll('.reveal .slides section');
+    
+    // Пройдем по всем секциям
+    slides.forEach((slide, index) => {
+        // Если у секции есть атрибут data-type="Asacol"
+        if (slide.getAttribute('data-type') === 'Asacol') {
+            // Выведем data-index этой секции
+            localStorage.setItem('dataIndexAsacol', index);
+            console.log(localStorage.getItem('dataIndexAsacol'));
+        }
+    });
+}
+
 
 function addButtonsToBackgroundContainer(slideId, buttons) {
     const section = document.getElementById(slideId); // Находим section по ID
@@ -347,4 +367,5 @@ function adjustScale() {
   // Настроим наблюдатель на изменения в DOM
   observer2.observe(document.body, { childList: true, subtree: true });
 
+ 
   

@@ -524,7 +524,8 @@ const slideButtonConfig = {
     ],
     Asacol: [
         { id: 'btn-back', icon: 'slides/Enterol2560/1icons/svg/logout-circle-1.svg', x: 7, y: 83, width: 5, height: 5, action: 'Reveal.prev();' },
-        { id: 'btn-next', icon: 'slides/Enterol2560/1icons/svg/logout-circle.svg', x: 12, y: 83, width: 5, height: 5, action: 'Reveal.next();' },
+        { id: 'btn-home', icon: 'slides/Enterol2560/1icons/svg/home-door.svg', x: 12, y:86, width: 5, height: 5, action:  "removeTempAllSubSlides();Reveal.slide(localStorage.getItem('dataIndexAsacol'));" },
+        { id: 'btn-next', icon: 'slides/Enterol2560/1icons/svg/logout-circle.svg', x: 17, y: 83, width: 5, height: 5, action: 'Reveal.next();' },
     ],
 };
 
