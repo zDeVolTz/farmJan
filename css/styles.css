@@ -1633,6 +1633,7 @@ display: flex;
 }
 
 .main-container {
+    background-color: #0A1152;
     border-radius: 20px;
     padding: 3% 5%;
     width: 85%;
@@ -2110,4 +2111,8 @@ display: flex;
   width: 80% !important;
   height: 70% !important;
   z-index: 100001 !important;
+}
+
+#slide-0 {
+  background-color: #0A1152 !important;
 }
