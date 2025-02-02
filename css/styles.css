@@ -2100,4 +2100,5 @@ display: flex;
   top: 57% !important;
   width: 80% !important;
   height: 70% !important;
+  z-index: 100001 !important;
 }

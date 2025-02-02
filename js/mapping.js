@@ -545,6 +545,17 @@ const arrayVisit1 = [
     { type: "Asacol", image: "slides/Asacol/A (3).png" }
 ];
 
+
+const arrayVisit1v2 = [
+    {
+        type: "Asacol",
+        image: "slides/Asacol/A2/7.png",
+        special_animation: 'Special',
+        animation_text: a_2,
+    },
+    { type: "Asacol", image: "slides/Asacol/A (3).png" }
+];
+
 const arrayVisit2 = [
     { type: "Asacol", image: "slides/Asacol/A (4).png" },
     { type: "Asacol", image: "slides/Asacol/A (5).png" },
