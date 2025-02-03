@@ -87,7 +87,7 @@ const visit = `
         <button class="visit" id="visit2" style="background-image: url('slides/Asacol/A0/2.png');" onclick="addTemporarySlides(arrayVisit2)"></button>
         <button class="visit" id="visit3" style="background-image: url('slides/Asacol/A0/3.png');" onclick="addTemporarySlides(arrayVisit3)"></button>
         <button class="visit" id="visit4" style="background-image: url('slides/Asacol/A0/4.png');" onclick="addTemporarySlides(arrayVisit4)"></button>
-        <button class="visit" id="visit5" style="background-image: url('slides/Asacol/A0/5.png');" onclick="window.location.href='https://drive.google.com/file/d/1hyBtO4NPeKQM0Lc9ZuoL3hBYD6DuX1Kp/view?usp=sharing';"></button>
+        <button class="visit" id="visit5" style="background-image: url('slides/Asacol/A0/5.png');" onclick="window.open('https://drive.google.com/file/d/1hyBtO4NPeKQM0Lc9ZuoL3hBYD6DuX1Kp/view?usp=sharing', '_blank');"></button>
     </div>
 `
 
@@ -97,7 +97,7 @@ const visit_child = `
         <button class="visit" id="visit2" style="background-image: url('slides/Asacol/A0/2.png');" onclick=""></button>
         <button class="visit" id="visit3" style="background-image: url('slides/Asacol/A0/3.png');" onclick=""></button>
         <button class="visit" id="visit4" style="background-image: url('slides/Asacol/A0/4.png');" onclick=""></button>
-        <button class="visit" id="visit5" style="background-image: url('slides/Asacol/A0/5.png');" onclick="window.location.href='https://drive.google.com/file/d/1hyBtO4NPeKQM0Lc9ZuoL3hBYD6DuX1Kp/view?usp=sharing';"></button>
+        <button class="visit" id="visit5" style="background-image: url('slides/Asacol/A0/5.png');" onclick="window.open('https://drive.google.com/file/d/1hyBtO4NPeKQM0Lc9ZuoL3hBYD6DuX1Kp/view?usp=sharing', '_blank');"></button>
     </div>
 `
 
@@ -107,7 +107,7 @@ const visit_full = `
         <button class="visit" id="visit2" style="background-image: url('slides/Asacol/A0/2.png');" onclick="addTemporarySlides(arrayVisit2)"></button>
         <button class="visit" id="visit3" style="background-image: url('slides/Asacol/A0/3.png');" onclick="addTemporarySlides(arrayVisit3)"></button>
         <button class="visit" id="visit4" style="background-image: url('slides/Asacol/A0/4.png');" onclick="addTemporarySlides(arrayVisit4)"></button>
-        <button class="visit" id="visit5" style="background-image: url('slides/Asacol/A0/5.png');" onclick="window.location.href='https://drive.google.com/file/d/1hyBtO4NPeKQM0Lc9ZuoL3hBYD6DuX1Kp/view?usp=sharing';"></button>
+        <button class="visit" id="visit5" style="background-image: url('slides/Asacol/A0/5.png');" onclick="window.open('https://drive.google.com/file/d/1hyBtO4NPeKQM0Lc9ZuoL3hBYD6DuX1Kp/view?usp=sharing', '_blank');"></button>
     </div>
 `
 

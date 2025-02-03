@@ -433,26 +433,29 @@ function adjustScale() {
 
 
   function toggleActiveClass(event) {
-    // Находим все элементы с классом .m_14-btn
-    const buttons = document.querySelectorAll('.m_14-btn');
-    
-    // Убираем класс active у всех кнопок
-    buttons.forEach(button => button.classList.remove('active'));
+        // Находим все элементы с классом .m_14-btn
+        const buttons = document.querySelectorAll('.m_14-btn');
+        
+        // Убираем класс active у всех кнопок
+        buttons.forEach(button => button.classList.remove('active'));
 
-    // Добавляем класс active только на ту, по которой кликнули
-    event.target.classList.add('active');
-}
-
-    // Обработчик клика по документу, чтобы снять класс active, если клик был вне блоков
-    document.addEventListener('click', function(event) {
-        const m_14Block = document.querySelector('.m_14-btn-block'); // Находим родительский блок с кнопками
-        const isClickInside = m_14Block.contains(event.target); // Проверяем, был ли клик внутри блока .m_14-btn-block
-
-        if (!isClickInside) {
-            // Если клик был вне блока .m_14-btn-block, убираем класс active у всех кнопок
-            const buttons = document.querySelectorAll('.m_14-btn');
-            buttons.forEach(button => button.classList.remove('active'));
+        // Добавляем класс active только на ту, по которой кликнули
+        event.target.classList.add('active');
     }
-});
+
+    document.addEventListener('click', function(event) {
+        const m_14Block = document.querySelector('.m_14-btn-block'); 
+        
+        if (m_14Block) { // Проверяем, существует ли элемент
+            const isClickInside = m_14Block.contains(event.target); 
+    
+            if (!isClickInside) {
+                // Если клик был вне блока, убираем класс active у всех кнопок
+                document.querySelectorAll('.m_14-btn').forEach(button => 
+                    button.classList.remove('active')
+                );
+            }
+        }
+    });
 
   
