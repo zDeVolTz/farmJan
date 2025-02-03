@@ -1116,3 +1116,15 @@ const c_9 = `
         <button class="hidden-video-stresam-close" id="hidden-video-stresam-close" onclick="document.getElementById('hidden-video-stresam-overlay').style.display='none'; document.getElementById('hidden-video-stresam').pause();">X</button>
     </div>
 `
+const m_14 = `
+    <div class="m_14-btn-block">
+        <div class="m_14-btn-block-content">
+            <img id="m_14-1" src="slides/Marimer2560/animBtnM14/br.png"  class="m_14-btn" onclick="toggleActiveClass(event)"></img>
+            <img id="m_14-2" src="slides/Marimer2560/animBtnM14/bro.png" class="m_14-btn" onclick="toggleActiveClass(event)"></img>
+        </div>
+        <div class="m_14-btn-block-content">
+            <img id="m_14-3" src="slides/Marimer2560/animBtnM14/grv.png"  class="m_14-btn" onclick="toggleActiveClass(event)"></img>
+            <img id="m_14-4" src="slides/Marimer2560/animBtnM14/no.png" class="m_14-btn" onclick="toggleActiveClass(event)"></img>
+        </div
+    </div>
+`

@@ -1,6 +1,7 @@
 let tempSlidesMap = {}; // Карта для хранения временных слайдов и их родительских слайдов
 let tempId = 1;
 
+
 function generateTemporarySlideForSlides(slideData) {
     console.log("generateTemporarySlide");
     console.log("slideData", slideData);
@@ -33,13 +34,13 @@ function generateTemporarySlideForSlides(slideData) {
         ${text}
     `;
 
+
     section.appendChild(container);
     return section;
 }
 
 function addTemporarySlides(slideDataArray) {
     console.log("addTemporarySlides");
-
     const currentSlide = Reveal.getCurrentSlide();
     if (!currentSlide) {
         console.error('Текущий слайд не найден.');
@@ -54,7 +55,6 @@ function addTemporarySlides(slideDataArray) {
 
     let parentSlideId = null;
     let tempSlidesList= []
-
     // Создаём и добавляем каждый временный слайд из массива
     slideDataArray.forEach(slideData => {
         const tempSlide = generateTemporarySlideForSlides(slideData);

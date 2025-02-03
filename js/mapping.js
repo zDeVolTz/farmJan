@@ -68,7 +68,8 @@ const mapping = {
         {
             image: "slides/Marimer2560/M (14).png",
             type: "Marimer",
-            special_animation: 'Base'
+            special_animation: 'Special',
+            animation_text: m_14
         },
         {
             image: "slides/Bebykol2560/Б (5) new.png",
@@ -632,6 +633,8 @@ const arrayM1_3 = [
     {
             image: "slides/Marimer2560/M (14).png",
             type: "Marimer",
+            special_animation: 'Special',
+            animation_text: m_14
     },
     {
             image: "slides/Marimer2560/M (23).png",

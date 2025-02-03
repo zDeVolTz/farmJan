@@ -1,6 +1,9 @@
 let temp_id = 1;
 let lastTempSlide = null;
 
+
+
+
 function generateTemporarySlide(slideData) {
     const animationText = checkSpecAnimation(slideData);
     const text = animationText !== null ? animationText : "";
@@ -42,7 +45,7 @@ function generateTemporarySlide(slideData) {
 
 function addTemporarySlide(slideData) {
     console.log("addTemporarySlide");
-
+    console.log(slideData);
     const currentSlide = Reveal.getCurrentSlide();
     if (!currentSlide) {
         console.error('Текущий слайд не найден.');

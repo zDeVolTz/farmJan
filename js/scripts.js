@@ -1,6 +1,55 @@
 
 let dataIndexAsacol = 0;
-
+const addButtonsTemp = [
+    {
+        image: 'url("slides/Enterol v3/Е (40).png")',
+        index: 1
+    },
+    {
+        image: 'url("slides/Enterol v3/Е (39).png")',
+        index: 2
+    },
+    {
+        image: 'url("slides/Enterol v3/Е (38).png")',
+        index: 3
+    },
+    {
+        image: 'url("slides/Enterol v3/Е (35).png")',
+        index: 4
+    },
+    {
+        image: 'url("slides/Enterol v3/Е (36).png")',
+        index: 5
+    },
+    {
+        image: 'url("slides/Enterol v3/Е (33).png")',
+        index: 6
+    },
+    {
+        image: 'url("slides/Enterol v3/Е (34).png")',
+        index: 7
+    },
+    {
+        image: 'url("slides/Enterol v3/Е (32).png")',
+        index: 8
+    },
+    {
+        image: 'url("slides/Enterol v3/Е (41).png")',
+        index: 9
+    },
+    {
+        image: 'url("slides/Enterol v3/Е (43).png")',
+        index: 10
+    },
+    {
+        image: 'url("slides/Enterol v3/Е (45).png")',
+        index: 11
+    },
+    {
+        image: 'url("slides/Enterol v3/Е (48).png")',
+        index: 12
+    },
+];
 
 function checkSpecAnimation(slide) {
     if (slide.special_animation === 'Special') {
@@ -9,8 +58,6 @@ function checkSpecAnimation(slide) {
 }
 
 function generateSlides(slideSet) {
-    console.log("loadSlidesHoriz");
-    console.log("slideSet", slideSet);
     return slideSet.map((slide, index) => {
         // Проверка наличия специальной анимации
         const animationText = checkSpecAnimation(slide);
@@ -67,7 +114,7 @@ function loadSlides(setName) {
 
     // Генерация новых слайдов
     const newSlides = generateSlides(mapping[setName]);
-    console.log(newSlides);
+
 
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = newSlides;
@@ -135,6 +182,23 @@ function addButtonsToBackgroundContainer(slideId, buttons) {
         } else {
             console.error('background-container не найден в section:', slideId);
         }
+        const bgImage = backgroundContainer.style.backgroundImage;
+        const matchingSlide = addButtonsTemp.find(item => item.image === bgImage);
+
+        if (matchingSlide) {
+            const extraDiv = document.createElement('div');
+            extraDiv.id = `extra-${matchingSlide.index}`;
+            extraDiv.className = 'extra-content';
+            
+            extraDiv.addEventListener('click', function () {
+                addTemporarySlide({ image: 'slides/Enterol2560/E (Ssi).png', type: 'Enterol' });
+            });
+
+            if (!backgroundContainer.querySelector(`#${extraDiv.id}`)) {
+                backgroundContainer.appendChild(extraDiv);
+            }
+        }
+
     } else {
         console.error('Section с ID', slideId, 'не найден');
     }
@@ -367,5 +431,16 @@ function adjustScale() {
   // Настроим наблюдатель на изменения в DOM
   observer2.observe(document.body, { childList: true, subtree: true });
 
- 
+
+  function toggleActiveClass(event) {
+      // Находим все элементы с классом .m_14-btn
+      const buttons = document.querySelectorAll('.m_14-btn');
+      
+      // Убираем класс active у всех кнопок
+      buttons.forEach(button => button.classList.remove('active'));
+
+      // Добавляем класс active только на ту, по которой кликнули
+      event.target.classList.add('active');
+  }
+
   

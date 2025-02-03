@@ -2292,9 +2292,110 @@ display: flex;
     z-index: 9999999;
     font-size: 30px;
 }
-  
-    
 
+
+.extra-content {
+  position: absolute;
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  z-index: 999999999;
+  width: 12%;
+  height: 6%;
+  border-radius: 50%;
+}
+
+#extra-1 {
+  top: 68%;
+  left: 5.5%;
+}
+
+#extra-2 {
+  top: 78%;
+  left: 5.5%;
+}
+
+#extra-3 {
+  top: 73.3%;
+  left: 21.2%;
+}
+
+#extra-9 {
+  top: 61.5%;
+  left: 5.6%;
+}
+
+#extra-4 {
+  top: 83.1%;
+  left: 5.6%;
+}
+
+#extra-5 {
+  top: 85%;
+  left: 5.6%;
+}
+
+#extra-6 {
+  top: 64.8%;
+  left: 5.6%;
+}
+
+#extra-7 {
+  top: 83.4%;
+  left: 5.6%;
+}
+
+#extra-8 {
+  top: 59%;
+  left: 5.6%;
+}
+
+#extra-10 {
+  top: 79.5%;
+  left: 5.6%
+}
+
+#extra-11 {
+  top: 82.5%;
+  left: 5.6%
+}
+
+#extra-12 {
+  top: 84%;
+  left: 5.6%
+}
+
+.m_14-btn-block {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 54%;
+  height: 35%;
+  z-index: 999999;
+}
+
+.m_14-btn-block-content {
+  display: flex;
+  height: 50%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.m_14-btn {
+  transform: scale(1);               /* Изначальный масштаб */
+  margin: 0px !important;            /* Убираем отступы с использованием !important */
+  width: 46%;                        /* Ширина изображения */
+  height: 60%;                       /* Высота изображения */
+  object-fit: contain;               /* Масштабирование изображения с сохранением пропорций */
+  cursor: pointer;                  /* Курсор в виде руки */
+  transition: transform 0.3s ease;   /* Плавный переход для изменения масштаба */
+}
+
+.m_14-btn.active {
+  transform: scale(1.2);             /* Увеличение масштаба при добавлении класса active */
+}
 
 /* Останавливаем скрытие фокусируемых элементов внутри родительского элемента с aria-hidden */
 [aria-hidden="true"] :focus {
