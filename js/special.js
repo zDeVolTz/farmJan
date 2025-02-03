@@ -1086,9 +1086,9 @@ const c_9 = `
     <button class="play-button-stresam"
         onclick="
             const video = document.querySelector('#hidden-video-stresam');
-            video.style.display = 'block';
+            const videoOverlay = document.querySelector('#hidden-video-stresam-overlay');
+            videoOverlay.style.display = 'block';
             video.play();
-            this.style.display = 'none';
         "
         style="
             position: absolute;
@@ -1106,22 +1106,13 @@ const c_9 = `
     </button>
 
     <!-- Спрятанное видео -->
-    <video id="hidden-video-stresam"
-        style="
-            display: none;
-            position: absolute;
-            top: 58%;
-            border-radius: 20px;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 85%;
-            height: auto;
-            z-index: 999;
-        "
-        controls
-        disablepictureinpicture
-        controlslist="nodownload noplaybackrate">
-        <source src="slides/Stresam2560/stresam.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <div class="hidden-video-stresam-overlay" id="hidden-video-stresam-overlay">
+        <video class="hidden-video-stresam" id="hidden-video-stresam"
+            controls
+            disablepictureinpicture
+            controlslist="nodownload noplaybackrate">
+            <source src="slides/Stresam2560/stresam.mp4" type="video/mp4">
+        </video>
+        <button class="hidden-video-stresam-close" id="hidden-video-stresam-close" onclick="document.getElementById('hidden-video-stresam-overlay').style.display='none'; document.getElementById('hidden-video-stresam').pause();">X</button>
+    </div>
 `

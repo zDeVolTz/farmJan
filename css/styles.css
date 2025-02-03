@@ -2044,6 +2044,63 @@ display: flex;
 }
 
 @media (max-height: 700px) {
+    #m_16-1 {
+      position: absolute;
+      top: 19%;
+      left: 53%;
+  }
+
+  .m_16-buttons {
+      width: 13%;
+      height: 17%;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 9999999999999999999999;
+  }
+
+    #m_16-3 {
+      position: absolute;
+      top: 63%;
+      left: 53%;
+  }
+
+  #m_16-6 {
+    position: absolute;
+    top: 19%;
+    left: 3%;
+  }
+
+    #m_16-4 {
+      position: absolute;
+      top: 62%;
+      left: 3%;
+  }
+
+    #c11-cell1 {
+      position: absolute;
+      width: 9%;
+      height: 5%;
+      opacity: 30%;
+      top: 36%;
+      left: 38.3%;
+      cursor: pointer;
+      z-index: 999999999999999999;
+  }
+
+  #c11-cell2 {
+    position: absolute;
+    width: 16%;
+    height: 5%;
+    opacity: 30%;
+    top: 31%;
+    left: 53.5%;
+    cursor: pointer;
+    z-index: 999999999999999999;
+  }
+  .play-button-stresam {
+    top: 72% !important;
+    height: 17% !important;
+  }
   .main-block {
       scale: 1;
       transform: translate(40%, -5%);
@@ -2196,6 +2253,48 @@ display: flex;
 #slide-0 {
   background-color: #0A1152 !important;
 }
+
+.hidden-video-stresam-overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  z-index: 999999;
+}
+
+.hidden-video-stresam {
+  display: block;
+  position: relative;
+  top: 50%;
+  border-radius: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  z-index: 9999999;
+  object-fit: fill;
+}
+
+.hidden-video-stresam-close {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0px;
+    border-radius: 25%;
+    width: 2%;
+    height: 3%;
+    position: absolute;
+    top: 7%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    z-index: 9999999;
+    font-size: 30px;
+}
+  
+    
+
 
 /* Останавливаем скрытие фокусируемых элементов внутри родительского элемента с aria-hidden */
 [aria-hidden="true"] :focus {
