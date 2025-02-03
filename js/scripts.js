@@ -191,7 +191,7 @@ function addButtonsToBackgroundContainer(slideId, buttons) {
             extraDiv.className = 'extra-content';
             
             extraDiv.addEventListener('click', function () {
-                addTemporarySlide({ image: 'slides/Enterol v3/E (56).png', type: 'Enterol' });
+                addTemporarySlide({ image: 'slides/Enterol v3/E (56).png', type: 'EnterolV3' });
             });
 
             if (!backgroundContainer.querySelector(`#${extraDiv.id}`)) {
