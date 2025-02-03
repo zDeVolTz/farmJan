@@ -134,7 +134,7 @@ body {
     /*max-width: 400px;*/
     max-height: 100%;
     height: 100%; /* Автоматическая высота для сохранения пропорций */
-    aspect-ratio: 443 / 119; /* Соотношение сторон кнопки */
+    /* aspect-ratio: 443 / 119;  */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
